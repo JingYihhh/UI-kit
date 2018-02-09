@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@import "global";
+
+body{
+  background-color: $clrHtmlBg;
+}
+
+.content-main{
+  padding-top: 0;
+  padding-bottom: $minSpacing*2;
+}
+
+.donate-content{
+  padding: 0 $minSpacing*2;
+  min-height: calc(100vh - 215px);
+  background-color: $clrWhiteBg;
+}
+
+.section-title{
+  @extend %fontNormal;
+  font-weight: bold;
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+}
+
+.donate-section{
+  padding: $minSpacing $minSpacing*2 0;
+  border-bottom: 1px solid #fff;
+
+  &.proj-brief{
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+
+  .num{
+    color: $clrMain;
+    font-weight: bold;
+  }
+
+  .percent{
+    font-weight: bold;
+    color: $clrTextRed;
+  }
+}
+
+.form-horizontal{
+  .control-label{
+    max-width: 100px;
+  }
+}

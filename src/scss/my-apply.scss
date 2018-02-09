@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "global";
+
+.my-apply-detail{
+  margin-top: $minSpacing*2;
+  .control-label{
+    width: 56px;
+    text-align: right;
+    &+span{
+      margin-left: $minSpacing;
+    }
+  }
+  .project-name{
+    color: $clrHtmlBlue;
+  }
+}
+.content-block{
+  margin-top: $minSpacing*2;
+  color: $clrCancel;
+  line-height: 22px;
+  p{
+    @extend %fontSmall;
+    color: $clrCancel;
+    text-indent: 2em;
+    margin-top: $minSpacing/2;
+  }
+}

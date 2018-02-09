@@ -1,0 +1,77 @@
+@charset "UTF-8";
+@import "global.scss";
+
+body{
+  background-color: $clrHtmlBg;
+}
+.order-cont {
+  background-color: $clrWhiteBg;
+  min-height: calc(100vh - 227px);
+  padding: $minSpacing*3 $minSpacing*2;
+  margin-bottom: $minSpacing*3;
+}
+//submit success css
+.submit-success{
+  >h2{
+    @extend %fontH1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: $minSpacing*3;
+    &:before{
+      display: inline-block;
+      content: url("../../img/msg-icon/icon-msg-success-24.png");
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+  >p{
+    @extend %fontNormal;
+    text-align: center;
+    margin-bottom: 20px;
+    span.order-num{ color: $clrMain; }
+    span.hotline{ font-weight: bold; }
+    a{ color: $clrHtmlBlue; text-decoration: underline; }
+  }
+  .oola-btn-group{
+    text-align: center;
+  }
+  //detail content
+  .detail-cont{
+    margin-top: $minSpacing*3;
+    padding: $minSpacing*2;
+    background-color: $clrHtmlBg;
+  }
+  .figure.agency{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: $minSpacing*2;
+    &:hover{
+      box-shadow: none;
+    }
+    img{
+      display: block;
+      width: 96px;
+      height: 96px;
+      margin-right: $minSpacing;
+      vertical-align: middle;
+    }
+    .figcaption{
+      width: calc(100% - 108px);
+      padding: 0;
+      h2{
+        @extend %fontNormal;
+        font-weight: bold;
+      }
+    }
+  }
+  .contact-cont{
+    margin-top: $minSpacing*2;
+    label, span{
+      font-size: 12px;
+    }
+    .control-label{
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+//
+   Created by Jingyi on 2016-8-22.
+//- var modalSize = {"size": ["sm", "md", "lg"], "title": ["小弹框", "中弹框", "大弹框"]}
+mixin oolaModal(formalSize, hasTitle, title, hasFooter, clazzName)
+    .modal.oola-modal(style="display: block;" class=clazzName)
+        .modal-dialog(class="oola-modal-" + "#{formalSize}")
+            .modal-content
+                .modal-header
+                    button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") &times;
+                    if(hasTitle)
+                        h4.modal-title= title
+                .modal-body
+                    if block
+                        block
+                    else
+                        | some contents
+                if(hasFooter)
+                    +modalFooter
+
+mixin modalFooter
+    //可选的弹层底栏
+    .modal-footer
+        if block
+            block
+         button.oola-btn.btn-main(type="button") 确定
+         button.oola-btn.btn-gray(type="button") 取消

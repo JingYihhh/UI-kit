@@ -1,0 +1,23 @@
+//  Created by Dicky on 2016/12/20.
+
+include my-center-tag/createProject
+include my-center-tag/createProduct
+include my-center-tag/createAddress
+
+
+mixin createTag()
+    .tag-cont.clearfix.fl(class!=attributes.class)
+        table
+            tr
+                td.tag-main
+                    case attributes.class
+                        when "tag-project"
+                            +createProject(attributes.labelFlag, attributes.strArr)
+                        when "tag-product"
+                            +createProduct()
+                        when "tag-address"
+                            +createAddress(addrInfoObj=attributes.addrInfoObj,labelFlag=attributes.labelFlag)
+                td.tag-operation
+                    if attributes.btnArr
+                        each btn in attributes.btnArr
+                            a.btn.btn-link(class!=btn.class)=btn.name

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import "global";
+
+.news-content{
+  .content-area{
+    padding: 0 $minSpacing;
+  }
+}
+
+.main-news-content{
+  border: 1px solid $clrBorder;
+  padding: $minSpacing*2;
+  width: 832px;
+  min-height: 500px;
+
+  .content-title{
+    @extend %fontH3;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: $minSpacing;
+  }
+
+  .news-info{
+    line-height: 1;
+    text-align: center;
+    span{
+      margin: 0 $minSpacing;
+      @extend %fontSmall;
+      color: $clrCancel;
+    }
+  }
+
+  .article-cont{
+    margin-top: $minSpacing*2;
+    img{
+      display: block;
+      margin: $minSpacing auto;
+      max-width: 100%;
+    }
+  }
+}
+
+//右侧边栏
+.qna-support{
+  list-style: decimal;
+  margin-left: 20px;
+
+  a{
+    @extend %fontNormal;
+  }
+}

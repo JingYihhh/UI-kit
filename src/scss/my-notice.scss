@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "global";
+
+.table.oola-table.oola-table-row{
+  tr{
+    td:first-child{
+      text-align: left;
+    }
+  }
+  td{
+    .notice-has-read, .send-date{
+      color: $clrCancel;
+    }
+  }
+}
+//消息通知
+.notice-has-read, .send-date{
+  font-size: 12px;
+  color: $clrCancel;
+}
+.notice-content{
+  >h3, >span{
+    display: block;
+    text-align: center;
+  }
+  >h3{
+    font-weight: bold;
+    margin-bottom: $minSpacing;
+  }
+  .notice-main{
+    margin-top: $minSpacing*2;
+    p{
+      text-indent: 2em;
+    }
+  }
+}

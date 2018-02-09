@@ -1,0 +1,29 @@
+//
+   Created by jingyi_h on 2016/12/20.
+extends ../../layout
+include ../oola-sidebar
+include ../oola-modal
+
+block append oolaCss
+    link(rel="stylesheet" href="./dist/css/my-info.css")
+
+block main
+    .breadcrumb-cont
+        .content-area.mar-cent
+            .oola-breadcrumbs
+                ul.breadcrumb.clearfix
+                    li: a(href="#") 个人中心
+                    li: a(href="#") 编辑资料
+                    li.current-pos 个人资料
+    section.content-main
+        .content-area.mar-cent.clearfix
+            //左侧边栏
+            .sidebar.fl
+                - var categoryList = ["个人资料","安全信息","管理地址"]
+                - var categorySubList = [""]
+                +oolaNavSidebar("", '', categoryList, categorySubList)
+            //修改资料主内容
+            .my-info-cont.fr
+                block mainBlock
+
+block append oolaScripts

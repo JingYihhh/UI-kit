@@ -1,0 +1,29 @@
+.limited-price{
+  position: absolute;
+  z-index: 2;
+  bottom: 74px;
+  left: -12px;
+  height: 24px;
+  min-width: 96px;
+  max-width: 216px;
+  padding: 0 5px;
+  font-size: 14px!important;
+  color: #ffffff!important;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: #ff7373;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 96px;
+    height: 29px;
+    background: url("../../img/recycle/label-bg.png") no-repeat;
+  }
+}

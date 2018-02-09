@@ -1,0 +1,22 @@
+//
+   Created by jingyi_h on 2017/3/9.
+
+//- 帮助支持类的内容卡片，调用时传入一个卡片标题
+//- 在调用mixin后面补充内容
+mixin createSupportTag(title)
+    .support-tag
+        h3.tag-title=title
+            a.fr(href="#") 更多
+        .support-content
+            if block
+                block
+
+mixin createMoreInfoTag(infoTitle, moreBtn)
+    .info-moudel
+        .info-title
+            h3= infoTitle
+                if (moreBtn)
+                    a.btn-more.fr(href="#") 更多
+        .notice-list-cont
+            if block
+                block

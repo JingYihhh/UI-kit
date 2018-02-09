@@ -1,0 +1,32 @@
+//  Created by Dicky on 2016/10/10.
+
+// createSwiperBtn(),createSwiperPagination():  isAnimate: value:true/false 是否加入动画
+// createBanner(): id,srcArr,clazzArr,isLazyLoad
+
+mixin createBanner(id,clazzArr,srcArr,isLazyLoad)
+	.swiper-container(id="#{id}" class="#{clazzArr}")
+		.swiper-wrapper
+			if (isLazyLoad)
+				for src in srcArr
+					a.swiper-slide
+						img.swiper-lazy(data-src="#{src}")
+						.swiper-lazy-preloader
+			else
+				for src in srcArr
+					a.swiper-slide
+						img(src="#{src}")
+		block
+//创建左右控制按钮
+mixin createSwiperBtn(isAnimate)
+	if(isAnimate)
+		.swiper-button.swiper-button-next.swiper-button-white.swiper-button-animate
+		.swiper-button.swiper-button-prev.swiper-button-white.swiper-button-animate
+	else
+		.swiper-button.swiper-button-next.swiper-button-white
+		.swiper-button.swiper-button-prev.swiper-button-white
+//创建页数按钮
+mixin createSwiperPagination(isAnimate)
+	if(isAnimate)
+		.swiper-pagination.pagination-animate
+	else
+		.swiper-pagination

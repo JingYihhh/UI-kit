@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+// 全部分类
+.side-title {
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+  margin: 0 $minSpacing*2;
+  border-bottom: 1px solid $clrBorder;
+}
+
+// 分类列表通用样式
+.category-cont {
+  position: relative;
+  width: $sideBarW;
+  min-height: 360px;
+  padding-bottom: $minSpacing*2;
+  //overflow: hidden;
+  background: $clrWhiteBg;
+  border: 1px solid $clrBorder;
+  dl {
+    dt {
+      height: 36px;
+      padding: $minSpacing/2 0;
+      margin: 0 $minSpacing*2;
+      cursor: pointer;
+      span.category-icon {
+        height: 23px;
+        width: 18px;
+        background: url("../../img/pts-mall/list-category-icon-sprite.png");
+        display: block;
+      }
+      h2, h2 a{
+        font-size: 14px;
+        color: $clrHtmlFont;
+        margin-left: $minSpacing;
+        line-height: 23px;
+      }
+      i.symbol {
+        transition-duration: .2s;
+      }
+    }
+    @for $i from 0 to 20 {
+      dt span.icon-#{$i+1} {
+        background-position: #{-18 * $i}px 0px;
+      }
+    }
+    &.on {
+      dd {
+        display: block;
+      }
+    }
+    dd {
+      display: none;
+      a {
+        color: $clrHtmlFont;
+        cursor: pointer;
+        margin-right: 12px;
+        &:hover, &.on {
+          color: $clrMain;
+        }
+      }
+    }
+  }
+}
+
+// 子菜单在底部
+.slide-bottom{
+  dl {
+    dt {
+      border-bottom: 1px solid $clrBorder;
+      i.symbol {
+        width: 12px;
+        height: 6px;
+        background: url("../../img/pts-mall/list-symbol-sprit.png");
+        -ms-background-position-y: -6px;
+        background-position-y: -6px;
+        margin-top: 8px;
+      }
+    }
+    &.on {
+      dt {
+        span.category-icon {
+          background-position-y: -23px;
+        }
+        h2, h2 a{
+          color: $clrMain;
+        }
+        i.symbol {
+          transform: rotate(-180deg);
+          -ms-background-position-y: 0px;
+          background-position-y: 0px;
+        }
+      }
+    }
+    dd {
+      padding: $minSpacing/2 0;
+      margin: 0 $minSpacing*2;
+      border-bottom: 1px solid $clrBorder;
+      a{
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// 子菜单在右边
+.slide-right{
+  $sideBarW: 240px;
+  width: $sideBarW;
+  min-height: 436px;
+  max-height: 436px;
+  border: 0;
+  .side-title{
+    border: 0;
+  }
+  dl{
+    position: relative;
+    dt{
+      height: 48px;
+      padding: $minSpacing 0;
+      border: 0;
+      i.symbol{
+        width: 6px;
+        height: 12px;
+        margin-top: 6px;
+        background: url("../../img/pts-mall/list-symbol-right.png") 0 0;
+      }
+    }
+    dd{
+      position: absolute;
+      top: 0;
+      margin: 0;
+      padding: 0 $minSpacing*2;
+      width: 240px;
+      height: 354px;
+      border-left: 1px solid $clrTableYellow;
+      border-top: 1px solid $clrTableYellow;
+      border-bottom: 1px solid $clrTableYellow;
+      background: $clrWhiteBg;
+      a{
+        float: none;
+        display: block;
+        padding: $minSpacing 0;
+        margin: 0;
+      }
+      &:nth-child(2){
+        height: auto;
+      }
+      @for $i from 1 through 3{
+        &:nth-child(#{$i+1}){
+          left: 240px * $i;
+        }
+      }
+    }
+    &:hover, &.on{
+      background-color: $clrTableYellow;
+    }
+  }
+}

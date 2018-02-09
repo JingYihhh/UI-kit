@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.progress{
+  background-color: $clrHtmlBg;
+  height: 4px;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  box-shadow: none;
+  .progress-bar{
+    width: 80%;
+    background-color: $clrMain;
+    box-shadow: none;
+  }
+}

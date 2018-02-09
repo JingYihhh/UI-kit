@@ -1,0 +1,11 @@
+//  Created by Dicky on 2016/9/29.
+
+mixin createInfoTag(className,number,unit,text)
+	a.recycle-info-tag.fl
+		i.info-icon.fl(class="#{className}")
+		.info-text.fl
+			p.num-cont
+				span.num(id=id data-value=number)
+				| #{unit}
+			p.text #{text}
+

@@ -1,0 +1,105 @@
+@charset "UTF-8";
+@import "global";
+
+.supports-cont{
+  .content-area{
+    padding: 0 $minSpacing;
+  }
+
+  // 侧边栏样式
+  .category-cont{
+    min-height: 146px;
+    padding-bottom: 0;
+    .side-title{
+      display: none;
+    }
+
+    dl {
+      position: relative;
+      dt {
+        border-bottom: 1px solid $clrBorder;
+        h2{
+          margin-left: 0;
+        }
+        span.category-icon{
+          display: none;
+        }
+        i.symbol {
+          width: 6px;
+          height: 12px;
+          margin-top: 6px;
+          background: url("../../img/pts-mall/list-symbol-right.png") 0 0;
+        }
+      }
+      &:last-child dt{
+        border-bottom: 0;
+      }
+      &:hover, &.on{
+        background-color: $clrTableYellow;
+      }
+    }
+  }
+}
+
+//主内容样式
+.main-support-cont{
+  border: 1px solid $clrBorder;
+  padding: 0 $minSpacing*2;
+  width: 936px;
+
+  .support-title{
+    border-bottom: 1px solid $clrBorder;
+    padding: $minSpacing 0;
+
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.support-list-cont{
+  padding: $minSpacing*2 0;
+
+  img{
+    max-width: 100%;
+  }
+
+  .section{
+    h3{
+      @extend %fontNormal;
+    }
+  }
+
+  ol.question-list{
+    margin-left: 20px;
+    list-style: decimal;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    li{
+      color: $clrHtmlBlue;
+    }
+
+    dl{
+      dt{
+        margin: $minSpacing 0;
+        a{
+          color: $clrHtmlBlue;
+          font-weight: normal;
+          cursor: pointer;
+        }
+      }
+
+      dd.qna-answer{
+        display: none;
+        padding: $minSpacing;
+        background-color: $clrTableYellow;
+        &.on{
+          display: block;
+        }
+      }
+    }
+  }
+}

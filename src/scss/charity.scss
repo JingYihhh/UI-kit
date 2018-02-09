@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+@import "global";
+$figureItemW: 268px;
+
+// 机构信息
+.institution-info{
+  margin: $minSpacing*2 0;
+
+  .institution-pic{
+    width: 852px;
+    height: 479px;
+  }
+}
+
+.institution-detail{
+  border: 1px solid $clrBorder;
+  padding: 26px $minSpacing*2 20px;
+  width: 324px;
+  height: 479px;
+  background-color: $clrWhiteBg;
+
+  .logo-cont{
+    margin: 0 auto;
+    border: 3px solid $clrBorder;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+
+    img{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .institution-name{
+    margin: 16px 0 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .institution-desc{
+    line-height: $minSpacing*2;
+    @extend %fontSmall;
+    color: $clrNavFont;
+
+    // 多行文本溢出隐藏
+    position: relative;
+    height: 144px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+
+    //&:after{
+    //  content: '…';
+    //  position: absolute;
+    //  bottom: 0;
+    //  right: 0;
+    //  padding: 0 5px;
+    //  background-color: $clrWhiteBg;
+    //}
+  }
+
+  .achievement-bar{
+    padding: $minSpacing 0;
+
+    .achievement{
+      display: inline-block;
+      width: calc(100% / 3);
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &+.achievement{
+        padding-left: $minSpacing;
+      }
+
+      span{
+        line-height: 1;
+        font-weight: bold;
+        color: $clrMain;
+      }
+
+      p{
+        color: $clrNavFont;
+        margin-top: 3px;
+        line-height: 1;
+      }
+    }
+  }
+
+  .btn-apply{
+    margin: $minSpacing 0 $minSpacing*2;
+    padding: 10px 109px;
+  }
+
+  .monthly-report{
+    display: block;
+    margin-top: 20px;
+    @extend %fontSmall;
+    color: $clrNavFont;
+    text-align: center;
+    text-decoration: underline;
+    &:hover{
+      opacity: .8;
+    }
+  }
+}
+
+// 主体内容
+.content-main{
+  margin: $minSpacing*2 0;
+}
+
+.project-list-cont{
+  width: 852px;
+}
+
+.progress{
+  margin: 12px 0;
+  height: 6px;
+}
+
+//热门项目
+.popular-project{
+  h2{
+    font-weight: bold;
+  }
+}
+
+.project-list{
+  margin-left: -($minSpacing*2);
+  @include figureItem($figureItemW);
+
+  .project-item{
+    margin-left: $minSpacing*2;
+  }
+
+  .target-amount{
+    color: $clrMain;
+    font-weight: bold;
+  }
+
+  .bottom-bar{
+    >span{
+      width: 33.33333%;
+      display: inline-block;
+      text-align: center;
+      font-size: 12px;
+      color: $clrNavFont;
+      .data{
+        @extend %fontSmall;
+      }
+    }
+  }
+}
+
+//分类项目
+.classify-project{
+  margin-top: $minSpacing;
+}
+
+ul.nav-classify{
+  border-bottom: 1px solid #e5e5e5;
+  height: 42px;
+  li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: calc(100% / 8);
+    margin: 7px 0;
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $clrMain;
+      bottom: -9px;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: -webkit-transform ease 0.25s;
+      -moz-transition: -moz-transform ease 0.25s;
+      -ms-transition: -ms-transform ease 0.25s;
+      -o-transition: -o-transform ease 0.25s;
+      transition: transform ease 0.25s;
+    }
+    a {
+      @extend %fontH3;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 2px 0;
+      -webkit-transition: all ease .25s;
+      -moz-transition: all ease .25s;
+      -ms-transition: all ease .25s;
+      -o-transition: all ease .25s;
+      transition: all ease .25s;
+    }
+    &:hover, &.active {
+      &:before{
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+      a {
+        color: $clrMain;
+      }
+    }
+  }
+}
+
+//右栏
+.info-moudel{
+  border: 1px solid $clrBorder;
+}

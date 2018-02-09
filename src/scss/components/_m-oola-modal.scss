@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+.modal {
+  &.oola-modal {
+    background-color: rgba(#434343, 0.5);
+    z-index: 5011;
+    .modal-dialog {
+      &.oola-modal-sm {
+        width: 408px;
+        margin: 250px auto;
+        .modal-header {
+          padding: 6px;
+          .modal-title {
+            @extend %fontH3;
+          }
+        }
+        .modal-body {
+          padding: 0 $minSpacing*2 $minSpacing*2;
+        }
+        .modal-footer {
+          padding: 0 36px 24px;
+        }
+      }
+      &.oola-modal-smd{
+        width: 480px;
+        margin: 200px auto;
+      }
+      &.oola-modal-md {
+        width: 648px;
+        margin: 200px auto;
+      }
+      &.oola-modal-lg {
+        width: 800px;
+        margin: 100px auto;
+      }
+    }
+    .modal-content {
+      border: 0;
+      box-shadow: none;
+      border-radius: 2px;
+    }
+    .modal-header {
+      padding: 7px 10px;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+      border-bottom: 0;
+      .modal-title {
+        @extend %fontH2;
+        text-align: center;
+      }
+      .close {
+        font-weight: normal;
+        color: $clrHtmlFont;
+        opacity: 0.6;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        -webkit-transition: opacity ease 0.2s;
+        -moz-transition: opacity ease 0.2s;
+        -ms-transition: opacity ease 0.2s;
+        -o-transition: opacity ease 0.2s;
+        transition: opacity ease 0.2s;
+        span[aria-hidden="true"] {
+          font-size: 24px;
+        }
+        &:hover {
+          opacity: 1;
+        }
+        &:active {
+          outline: none;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .modal-body {
+      padding: 0 $minSpacing*2 $minSpacing*2;
+      background-color: $clrWhiteBg;
+      @extend %fontNormal;
+      h3{
+        font-weight: bold;
+        text-align: center;
+      }
+    }
+    .modal-footer {
+      padding: 0 36px 36px;
+      border-top: 0;
+      text-align: center;
+    }
+    p.tips {
+      @extend %fontSmall;
+      color: $clrCancel!important;
+      text-align: left;
+      margin-top: $minSpacing;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+  .modal.oola-modal {
+    .oola-modal-sm {
+      margin-top: 100px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+//  Created by Dicky on 2016/9/29.
+
+.section-bg-dark {
+  .block-title-cont {
+    .block-title-inner-cont {
+      background-color: $clrHtmlBg;
+    }
+  }
+}
+
+.block-title-cont {
+  //background-color: $clrWhiteBg;
+  h2 {
+    text-align: center;
+    display: block;
+  }
+  .block-title {
+    background: url("../../img/common/subtitle-piece.jpg") repeat-x 50%;
+    text-align: center;
+  }
+  .block-title-inner-cont {
+    height: 47px;
+    line-height: 47px;
+    padding: 0px 24px;
+    background: #ffffff;
+    display: inline-block;
+  }
+  .title-zh {
+    @extend %fontH1;
+    font-weight: bold;
+  }
+  .title-en {
+    margin-top: 12px;
+    @extend %fontSmall;
+    color:#adadad;
+  }
+}

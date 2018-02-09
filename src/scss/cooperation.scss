@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import "global.scss";
+
+.recycle-cooperation{
+  >p{
+    margin-bottom: $minSpacing*2;
+  }
+}
+.partner-contact-form{
+  width: 672px;
+  margin: 0 $minSpacing;
+  textarea{
+    height: 132px;
+  }
+}
+.partner-logo-cont{
+  width: 504px;
+  .partner-logo{
+    width: 144px;
+    height: 60px;
+    overflow: hidden;
+    margin: 0 $minSpacing $minSpacing*2;
+    img{
+      max-width: 100%;
+    }
+  }
+}

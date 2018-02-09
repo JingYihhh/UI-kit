@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import "global";
+
+.error-cont{
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 156px);
+  background-color: $clrHtmlBg;
+
+  .content-area{
+    position: relative;
+    padding: 0 12px;
+    height: 100%;
+    background-color: $clrWhiteBg;
+  }
+}
+
+.error-main{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -164px;
+  margin-left: -153px;
+  width: 306px;
+  text-align: center;
+
+  a.oola-btn{
+    margin-top: 36px;
+  }
+}

@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+@import "global";
+
+body{
+  background-color: $clrHtmlBg;
+}
+
+.donate-cont {
+  background-color: $clrWhiteBg;
+  min-height: calc(100vh - 227px);
+  padding: $minSpacing*3 $minSpacing*2;
+  margin-bottom: $minSpacing*3;
+}
+
+//submit success css
+.submit-success{
+  >h2{
+    @extend %fontH1;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: $minSpacing*3;
+
+    &:before{
+      display: inline-block;
+      content: url("../../img/msg-icon/icon-msg-success-24.png");
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+  }
+
+  >p{
+    margin-bottom: 20px;
+    @extend %fontNormal;
+    text-align: center;
+
+    span.num{ color: $clrMain; font-weight: bold; margin: 0 $minSpacing/2; }
+    span.project-name{ color: $clrHtmlBlue; margin: 0 $minSpacing/2; }
+    a{ color: $clrHtmlBlue; text-decoration: underline; }
+  }
+
+  .oola-btn-group{
+    text-align: center;
+  }
+
+  //detail content
+  .detail-cont{
+    margin-top: $minSpacing*3;
+    padding: $minSpacing*2;
+    background-color: $clrHtmlBg;
+
+    >p{
+      font-weight: bold;
+    }
+  }
+
+  .row{
+    margin-top: $minSpacing;
+
+    label, span{
+      margin-top: $minSpacing/2;
+      font-size: 12px;
+    }
+
+    .control-label{
+      display: block;
+    }
+  }
+}
+
+// 关注微信公众号
+.follow-bar{
+  margin-top: $minSpacing*4;
+
+  >p{
+    margin-top: $minSpacing;
+    @extend %fontSmall;
+  }
+}

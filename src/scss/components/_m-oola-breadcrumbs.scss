@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.breadcrumb-cont{
+  background-color: $clrHtmlBg;
+}
+.oola-breadcrumbs{
+  padding: 0 $contentPd;
+  .breadcrumb{
+    background-color: transparent;
+    padding: 9px 0;
+    margin: 0;
+    >li {
+      float: left;
+      font-size: 12px;
+      a {
+        @extend %fontSmall;
+      }
+      &.current-pos{
+        color: $clrMain;
+      }
+    }
+    >li + li:before {
+      padding: 0 5px;
+      color: $clrHtmlFont;
+      content: "\003e";
+      font-size: 14px;
+      line-height: 1;
+    }
+  }
+}

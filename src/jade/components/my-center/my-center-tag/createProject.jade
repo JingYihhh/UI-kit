@@ -1,0 +1,8 @@
+//  Created by Dicky on 2016/12/20.
+include createContent
+
+mixin createProject(labelFlag,strArr)
+    .project-img-cont.fl
+        img(src="img/my-center/project-demo.jpg")
+    .tag-content.fl
+        +createContent(strArr)(labelFlag=labelFlag)

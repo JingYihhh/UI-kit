@@ -1,0 +1,33 @@
+//  Created by Dicky on 2016/10/31.
+
+.search-cont {
+  .col-md-9 {
+    //padding: 0;
+    .glyphicon {
+      margin-right: 4px;
+      color: $clrNavFont;
+    }
+  }
+  .swiper-container {
+    margin: 7px 0px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.ipt-search{
+  padding: 6px 12px;
+  border:solid 1px $clrFormBorder;
+  border-radius: 2px;
+  .ipt-text{
+    border:none;
+    line-height: 1;
+    font-size: 12px;
+    outline: none;
+    width: 260px;
+  }
+  .glyphicon{
+    color: $clrMain;
+  }
+}

@@ -1,0 +1,18 @@
+//  Created by Dicky on 2016/10/11.
+
+mixin createInputSearch(clazzArr)
+	.ipt-search(class="#{clazzArr}")
+		input.ipt-text(type="text" placeholder="iPhone 5S iPhone 4S  GALAXY S3")
+		a.glyphicon.glyphicon-search
+
+mixin createRollingTitle(clazzArr)
+	div(class=clazzArr)
+		span.glyphicon.glyphicon-volume-up
+		span 最近回收动态：
+		#rolling-title.swiper-container.swiper-container-vertical
+			.swiper-wrapper
+				-for (var i = 0; i < 5; i++)
+				.swiper-slide
+					p
+						| 地瓜乖** 在 刚刚 回收了
+						a.link 索尼（sony）S-3#{i}蓝牙音

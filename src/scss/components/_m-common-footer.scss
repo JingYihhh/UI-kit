@@ -1,0 +1,125 @@
+@charset "UTF-8";
+
+/*.footer{
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid $clrFooter;
+  background-color: rgba($clrCancel, .5);
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  .copyright{
+    padding-top: $minSpacing*2;
+  }
+}*/
+
+.common-footer {
+  background: $clrFooter;
+  height: 84px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  z-index: 5002;
+  .content-area{
+    padding: 0 $contentPd;
+  }
+  a.logo-sxb {
+    margin-top: 24px;
+  }
+  .share-cont {
+    $iconW: 32;
+    $iconH: 32;
+    padding-top: 27px;
+    margin-left: 48px;
+    a {
+      height: 32px;
+      width: 32px;
+      background: url("../../img/common/icons-footer.png") no-repeat;
+      display: block;
+      cursor: pointer;
+      transition: all ease 0.4s;
+      &.weibo {
+        background-position: -#{$iconW}px 0px;
+        &:hover {
+          background-position: -#{$iconW}px -#{$iconH}px;
+        }
+      }
+      &.wechat {
+        position: relative;
+        background-position: 0px 0px;
+        margin-left: 14px;
+        &:before {
+          display: block;
+          width: 168px;
+          height: 175px;
+          content: url("../../img/common/QRCode-oola.png");
+          position: absolute;
+          opacity: 0;
+          bottom: $iconH - 2px;
+          left: -(168px / 2 - ($iconW / 2));
+          transition: all ease 0.2s;
+          z-index: -9999;
+          visibility: hidden;
+        }
+        &:hover {
+          background-position: 0px -#{$iconH}px;
+        }
+        &:hover::before {
+          visibility: visible;
+          animation: fade 0.9s ease forwards;
+        }
+      }
+    }
+  }
+  .info-cont {
+    color: #ffffff;
+    font-size: 12px;
+    margin-top: 22px;
+    width: 674px;
+    ul.links-cont {
+      li {
+        &+li {
+          border-left: 1px solid $clrNavFont;
+        }
+        padding: 0px 6px;
+        a {
+          @extend %fontSmall;
+          color: $clrNavFont;
+        }
+        a:hover {
+          color: #fcfcfc;
+        }
+      }
+    }
+    span {
+      font-size: 12px;
+      margin-top: 5px;
+      color: $clrNavFont;
+    }
+    a {
+      font-size: 12px;
+      margin-top: 5px;
+      color: $clrNavFont;
+      clear: right;
+    }
+    a:hover {
+      color: #fcfcfc;
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    bottom: 30px;
+    visibility: visible;
+  }
+  10% {
+    z-index: 99;
+  }
+  to {
+    z-index: 99;
+    opacity: 1;
+    bottom: 39px;
+  }
+}

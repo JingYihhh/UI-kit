@@ -1,0 +1,14 @@
+//
+   Created by Jingyi on 2016-9-29.
+
+mixin oolaFigure(className, src, title, description)
+    figure.fl(class=className)&attributes({"value":  val++})
+        a(href="#")
+            .img-cont
+                img(src=src)
+            figcaption
+                p.figure-title= title
+                if block
+                    block
+                else
+                    p.figure-desc= description

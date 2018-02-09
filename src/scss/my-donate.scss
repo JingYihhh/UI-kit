@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import "global";
+
+.my-donate-detail{
+  margin-top: $minSpacing*2;
+  >p{
+    color: $clrCancel;
+    .project-name{
+      color: $clrHtmlBlue;
+      margin-left: $minSpacing;
+    }
+  }
+}
+ul.donate-detail-list{
+  height: 147px;
+  overflow: auto;
+  margin-top: 24px;
+  li{
+    position: relative;
+    padding-left: 20px;
+    line-height: 22px;
+    margin-left: 6px;
+    border-left: 2px solid $clrBorder;
+    font-size: 12px;
+    padding-bottom: $minSpacing;
+    span.date{
+      font-size: 12px;
+      color: $clrCancel;
+      margin-right: $minSpacing/2;
+    }
+    &:before{
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 12px;
+      height: 12px;
+      left: -7px;
+      top: 5px;
+      border: 2px solid $clrWhiteBg;
+      border-radius: 50%;
+      background: $clrBorder;
+    }
+  }
+  li:last-child{
+    border-color: transparent;
+    &:after{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 2px;
+      height: 5px;
+      left: -2px;
+      top: 0;
+      background: $clrBorder;
+    }
+  }
+}

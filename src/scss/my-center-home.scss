@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import "global";
+@import "components/my-center/_my-center-box";
+
+//- 统计栏样式
+.statistics-bar{
+  border: 1px solid $clrBorder;
+}
+.achievement-bar{
+  padding: $minSpacing*2 0;
+  .achievement{
+    display: inline-block;
+    min-width: 200px;
+    max-width: 280px;
+    padding-left: $minSpacing*2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @extend %fontSmall;
+    color: $clrCancel;
+    span{
+      font-size: 30px;
+      line-height: 1;
+      font-weight: bold;
+      margin-right: $minSpacing/2;
+    }
+    p{
+      @extend %fontSmall;
+      color: $clrCancel;
+      margin-top: 3px;
+      line-height: 1;
+    }
+  }
+}
+.check-in-bar{
+  width: 240px;
+  border-left: 1px solid $clrBorder;
+  .btn-check-in{
+    width: 74px;
+    height: 70px;
+    line-height: 70px;
+    padding: 0;
+    margin: $minSpacing;
+    text-align: center;
+    font-size: 16px;
+  }
+  .curr-date, .tips{
+    width: 154px;
+    text-align: center;
+  }
+  .curr-date{
+    font-weight: bold;
+    margin-top: $minSpacing*2;
+  }
+  .tips{
+    font-size: 12px;
+    color: $clrCancel;
+    margin-top: $minSpacing;
+  }
+}
+
+//任务栏样式
+.task-bar{
+  padding: $minSpacing $minSpacing*2;
+  ul{
+    margin-left: $minSpacing;
+    width: calc(100% - 68px);
+    li{
+      display: inline-block;
+      float: left;
+      margin-right: $minSpacing;
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $clrMain;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+      a{
+        font-size: 12px;
+        color: $clrCancel;
+      }
+      &:hover a{
+        color: $clrMain;
+      }
+    }
+  }
+}
+
+//我的样式
+$figureItemW: 204px;
+@include figureItem($figureItemW);
+.list{
+  padding-bottom: $minSpacing*2;
+  & + .list{
+    display: none;
+  }
+}
+
+.products-list{
+  margin-left: -$minSpacing*2;
+  .product-item{
+    margin-left: $minSpacing*2;
+  }
+}
+.project-list{
+  margin-left: -$minSpacing*2;
+  .project-item{
+    margin-left: $minSpacing*2;
+  }
+}
+
+//我的回收
+.order-list{
+  .order-item{
+    padding: $minSpacing 0;
+    border-bottom: 1px solid $clrBorder;
+    height: 84px;
+    .img-cont{
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      margin-right: $minSpacing;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .order-detail{
+    span{
+      display: block;
+      font-size: 12px;
+      color: $clrCancel;
+      margin-top: $minSpacing/3;
+    }
+  }
+  .order-operate{
+    padding: 20px 0;
+    a{
+      font-size: 12px;
+      &+a{
+        margin-left: $minSpacing*2;
+      }
+    }
+    .btn-ship{
+      color: $clrHtmlBlue;
+    }
+    .btn-cancel{
+      color: $clrHtmlRed;
+    }
+  }
+}

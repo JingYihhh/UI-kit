@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+*{
+  @extend %fontNormal;
+  box-sizing: border-box;
+}
+/* layout 布局 */
+body{
+  position: relative;
+  min-height: 100vh;
+  //padding-top: 72px;
+  padding-bottom: 84px;
+  overflow-x: hidden;
+}
+
+/*section背景颜色*/
+section {
+  padding: 24px 0px;
+  &.section-bg-dark {
+    background-color: $clrHtmlBg;
+    border-bottom: 1px solid $clrHtmlBg;
+  }
+
+  &.section-bg-Light {
+    background-color: $clrWhiteBg;
+    border-bottom: 1px solid $clrWhiteBg;
+  }
+}
+
+a {
+  transition-duration: .125s;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  &:hover{
+    color: initial;
+  }
+}
+
+.content-area{
+  width: 1200px;
+  /*padding: 0 12px;*/
+}
+
+/* Heading 标题 */
+h1, .head-title{
+  @extend %fontH1;
+}
+h2{
+  @extend %fontH2;
+}
+h3{
+  @extend %fontH3;
+}
+.subtitle{
+  @extend %fontH3;
+  line-height: 1;
+  font-weight: bold;
+  padding-left: $minSpacing/2;
+  border-left: 6px solid $clrMain;
+  //margin-bottom: $minSpacing*2;
+  margin: 0 $contentPd $minSpacing*2;
+}
+
+/* link 链接 */
+.link{
+  @extend %fontNormal;
+  color: $clrHtmlBlue!important;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover{
+    color: darken($clrHtmlBlue, 23%)!important;
+  }
+  &.disabled{
+    opacity: .65;
+    pointer-events: none;
+  }
+}
+
+
+/* content block 内容块框 */
+.content-block{
+  padding: $minSpacing*2 $minSpacing;
+  background-color: $clrHtmlBg;
+  &.text-block-yellow{
+    background-color: $clrYellowBg;
+  }
+}
+
+/* common shadow 阴影样式 */
+.common-shadow{
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.23);
+}
+
+/*hover时候添加阴影*/
+.hover-shadow:hover{
+  //box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* grid 栅格 */
+%gridPd{
+  padding-right: $minSpacing;
+  padding-left: $minSpacing;
+}
+%gridMg{
+  margin-left: -$minSpacing;
+  margin-right: -$minSpacing;
+}
+
+@for $i from 1 through 12{
+  .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}{
+    @extend %gridPd;
+  }
+}
+
+.row, .form-horizontal .form-group{
+  @extend %gridMg;
+}
+
+/* hr 水平分割线 */
+hr{
+  margin: 0;
+  border-color: $clrBorder;
+}
+
+/* 着重字体颜色 */
+.txt-blue{
+  color: $clrHtmlBlue!important;
+}
+.txt-red{
+  color: $clrHtmlRed!important;
+}
+.txt-gray{
+  color: $clrCancel!important;
+}
+
+/* 个人中心数据为空样式 */
+.nodata-main{
+  img.logo-nofound{
+    display: block;
+    margin: $minSpacing*3 auto $minSpacing;
+  }
+  p.tips-nofound{
+    text-align: center;
+    margin-bottom: $minSpacing*2;
+  }
+}

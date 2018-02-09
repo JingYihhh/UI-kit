@@ -1,0 +1,199 @@
+@charset "UTF-8";
+.comment-detail > p, .user-cont-R .user-name {
+  font-size: 14px;
+  color: #55575b; }
+
+.comment-detail .publish-time, .user-cont-R p, .user-cont-R a.recycle-product {
+  font-size: 12px;
+  color: #55575b; }
+
+.comment-cont {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 216px;
+  background-color: #ffffff;
+  border: 1px solid #ededed;
+  -webkit-transition: all ease 0.125s;
+  -moz-transition: all ease 0.125s;
+  -ms-transition: all ease 0.125s;
+  -o-transition: all ease 0.125s;
+  transition: all ease 0.125s; }
+
+.comment-detail {
+  border-bottom: 1px solid #ededed;
+  padding: 36px 23px 24px; }
+  .comment-detail:before {
+    content: url("../../img/common/icon-quote.png");
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 24px;
+    top: 24px;
+    left: 12px; }
+  .comment-detail > p {
+    position: relative;
+    overflow: hidden;
+    line-height: 1.6em;
+    text-indent: 2em;
+    height: 8em; }
+  .comment-detail .publish-time {
+    display: block;
+    color: #adadad;
+    margin-top: 12px; }
+
+.comment-user {
+  padding: 12px; }
+  .comment-user .user-avatar-cont {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px; }
+    .comment-user .user-avatar-cont img {
+      width: 100%; }
+
+.user-cont-R p {
+  width: 130px;
+  color: #adadad;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+.user-cont-R .user-name {
+  font-weight: bold;
+  margin-bottom: 10px; }
+.user-cont-R a.recycle-product {
+  color: #4ca7d6;
+  margin-left: 2px; }
+
+body {
+  background-color: #fffaed; }
+
+.typography-cont {
+  padding-top: 72px; }
+
+section {
+  margin: 24px 0 36px; }
+  section h2.typography-sub-heading {
+    color: #ffba17;
+    font-weight: bold;
+    margin-left: 12px; }
+    section h2.typography-sub-heading + div {
+      margin: 24px 0; }
+
+/* Code 源码 */
+.source-code-cont {
+  margin: 0 24px;
+  width: 60%; }
+  .source-code-cont h3 {
+    padding: 2px 8px;
+    margin: 0 1px;
+    border-left: 2px solid #23241f;
+    font-weight: bold; }
+
+/* Navigation 导航栏 / footer 底栏 */
+.common-nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffba17; }
+
+.logo {
+  margin: 0 12px;
+  padding: 17px 0; }
+  .logo > img, .logo > h1 {
+    display: inline-block;
+    vertical-align: middle; }
+
+.common-footer .copyright {
+  text-align: center;
+  margin-top: 24px; }
+
+/* Typesetting 排版 */
+.heading-cont h1, .heading-cont h2, .heading-cont h3, .heading-cont p, .heading-cont a {
+  width: 50%;
+  margin: 24px;
+  display: block; }
+
+/* Button 按钮 */
+.oola-btn-group {
+  margin: 24px; }
+
+/* Modal 模态框 */
+.modal-cont {
+  position: relative; }
+
+.modal {
+  position: static;
+  margin: 0 24px; }
+  .modal.oola-modal {
+    background-color: transparent; }
+    .modal.oola-modal .modal-dialog {
+      margin: 12px 0 !important; }
+  .modal:hover + code.oola-modal-code {
+    display: block; }
+
+code.oola-modal-code {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100px; }
+
+/* Table 表格 */
+.oola-table {
+  width: 50%;
+  margin-left: 24px !important;
+  margin-bottom: 28px !important; }
+  .oola-table caption {
+    color: #3c3e41 !important;
+    padding-top: 0; }
+    .oola-table caption:before {
+      display: inline-block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #3c3e41;
+      margin: 0 10px; }
+
+/* Pagination 分页器 */
+.oola-pagination {
+  width: 50%; }
+
+/* Breadcrumbs 面包屑 */
+.oola-breadcrumbs {
+  margin-left: 24px !important; }
+
+/* Notification 信息提示（弹框）*/
+.notice-cont {
+  position: static;
+  background-color: transparent;
+  text-align: left; }
+  .notice-cont .notice-block {
+    display: block;
+    margin: 12px 0 0 24px; }
+
+/* Graphic 图文 */
+#graphic .subtitle {
+  margin-top: 24px;
+  margin-left: 24px;
+  margin-bottom: 0; }
+
+.product-list .product-item {
+  margin-left: 12px;
+  margin-right: 12px; }
+
+.comment-list {
+  margin-top: 24px; }
+
+.comment-list .comment-cont {
+  margin: 0 12px; }
+
+/* Form 表单 */
+form {
+  width: 50%;
+  margin-top: 24px; }
+
+/*# sourceMappingURL=u-typography.css.map */

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import "../global.scss";
+
+.modal.oola-login-cont .oola-modal-sm{
+  .modal-header{
+    border: 0;
+  }
+  .modal-body{
+    padding: 2px $minSpacing*3 $minSpacing*2!important;
+    h2{
+      @extend %fontH1;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.login-form{
+  margin-top: $minSpacing*3;
+  .form-group{
+    margin-bottom: $minSpacing;
+  }
+  .user-ipt, .password-ipt{
+    border-left: none;
+  }
+  .input-group-addon{
+    padding: 0;
+    border-right: none;
+    background-color: transparent;
+  }
+  .check-code-ipt{
+    width: 204px;
+    margin-right: $minSpacing;
+    display: inline;
+  }
+  .checkbox-inline{
+    @extend %fontSmall;
+  }
+  .btn-link{
+    font-size: 12px;
+    color: $clrMain;
+    padding: 0 $minSpacing/2;
+    &+.btn-link{
+      border-left: 1px solid $clrBorder;
+    }
+    &:hover{
+      color: $clrMain;
+    }
+  }
+}
+.user-ipt-icon{
+  display: block;
+  width: 36px;
+  height: 34px;
+  background: url("../../img/common/login/icon-user.png") no-repeat 0 0 transparent!important;
+}
+.password-ipt-icon{
+  display: block;
+  width: 36px;
+  height: 34px;
+  background: url("../../img/common/login/icon-password.png") no-repeat 0 0 transparent!important;
+}
+.has-focus{
+  .user-ipt-icon{background: url("../../img/common/login/icon-user.png") no-repeat 0 -34px transparent!important;}
+  .password-ipt-icon{background: url("../../img/common/login/icon-password.png") no-repeat 0 -34px transparent!important;}
+}
+
+.btn-login-l{
+  width: 100%;
+  margin-top: $minSpacing;
+}
+
+//第三方登录
+.sign-in-with{
+  margin-top: $minSpacing*2;
+  h3{
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: center;
+    &:before, &:after{
+      content: '';
+      display: inline-block;
+      height: 1px;
+      width: calc(50% - 54px);
+      background-color: $clrBorder;
+      margin-top: 8px;
+    }
+    &:before{
+      float: left;
+    }
+    &:after{
+      float: right;
+    }
+  }
+  ul{
+    margin-top: $minSpacing*2;
+    text-align: center;
+    li{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin: 0 12px;
+      a{
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: url("../../img/common/login/third-party-login.png") no-repeat;
+        -webkit-transition: all ease 0.4s;
+        -moz-transition: all ease 0.4s;
+        -ms-transition: all ease 0.4s;
+        -o-transition: all ease 0.4s;
+        transition: all ease 0.4s;
+      }
+      @for $i from 1 through 3{
+        &:nth-child(#{$i}) a{
+          background-position: -30px*($i - 1) 0;
+          &:hover{
+            background-position: -30px*($i - 1) -30px;
+          }
+        }
+      }
+    }
+  }
+}

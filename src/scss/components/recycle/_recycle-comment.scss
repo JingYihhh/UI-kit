@@ -1,0 +1,74 @@
+.comment-cont{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 216px;
+  //margin: $minSpacing*2 $minSpacing 0;
+  background-color: $clrWhiteBg;
+  border: 1px solid #ededed;
+  -webkit-transition: all ease 0.125s;
+  -moz-transition: all ease 0.125s;
+  -ms-transition: all ease 0.125s;
+  -o-transition: all ease 0.125s;
+  transition: all ease 0.125s;
+}
+.comment-detail{
+  border-bottom: 1px solid #ededed;
+  padding: $minSpacing*3 $minSpacing*2-1 $minSpacing*2;
+  &:before{
+    content: url("../../img/common/icon-quote.png");
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 24px;
+    top: $minSpacing*2;
+    left: $minSpacing;
+  }
+  >p{
+    position: relative;
+    @extend %fontNormal;
+    overflow: hidden;
+    line-height: 1.6em;
+    text-indent: 2em;
+    height: 8em;
+  }
+  .publish-time{
+    display: block;
+    @extend %fontSmall;
+    color: $clrCancel;
+    margin-top: $minSpacing;
+  }
+}
+.comment-user{
+  padding: $minSpacing;
+  .user-avatar-cont{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: $minSpacing - 2;
+    img{
+      width: 100%;
+    }
+  }
+}
+.user-cont-R{
+  p{
+    width: 130px;
+    @extend %fontSmall;
+    color: $clrCancel;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .user-name{
+    @extend %fontNormal;
+    font-weight: bold;
+    margin-bottom: $minSpacing - 2;
+  }
+  a.recycle-product{
+    @extend %fontSmall;
+    color: $clrHtmlBlue;
+    margin-left: 2px;
+  }
+}

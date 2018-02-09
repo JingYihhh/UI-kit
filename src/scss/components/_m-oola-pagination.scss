@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+.oola-pagination{
+  padding: $minSpacing*2 0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  ul {
+    position: relative;
+    left: 50%;
+    li {
+      display: block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      right: 50%;
+      a {
+        @extend %fontSmall;
+        display: block;
+        width: 46px;
+        line-height: 1;
+        padding: 10px 0;
+      }
+      //上下页按钮样式，svg作背景
+      &.page-prev, &.page-next{
+        padding: 0;
+        height: 34px;
+        width: 34px;
+        margin: 0 $minSpacing/2;
+        a{
+          width: 34px;
+          height: 34px;
+        }
+      }
+      &.page-prev{
+        ///background: url("data:image/svg+xml;utf8,<svg class='prev-btn' data-name='prev-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#ffba17;fill-rule:evenodd;}.cls-2{fill:#e4e4e4;}</style></def><path class='cls-1' d='M13.6,16.68l0,0a.74.74,0,0,0,.15.86l5.51,5.21a.75.75,0,0,0,1-1.09L15.32,17l4.92-4.74a.75.75,0,1,0-1-1.08l-5.46,5.26,0,0,0,0a.65.65,0,0,0-.1.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+        background: url("../../img/common/page-arrow.png") 0 0;
+        &:hover{
+          //background: url("data:image/svg+xml;utf8,<svg class='prev-btn' data-name='prev-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#ffba17;fill-rule:evenodd;}.cls-2{fill:#ffe7ae;}</style></def><path class='cls-1' d='M13.6,16.68l0,0a.74.74,0,0,0,.15.86l5.51,5.21a.75.75,0,0,0,1-1.09L15.32,17l4.92-4.74a.75.75,0,1,0-1-1.08l-5.46,5.26,0,0,0,0a.65.65,0,0,0-.1.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+          background: url("../../img/common/page-arrow.png") 0 -34px;
+        }
+        &.page-btn-disabled{
+          //background: url("data:image/svg+xml;utf8,<svg class='prev-btn' data-name='prev-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#e4e4e4;fill-rule:evenodd;}.cls-2{fill:#e4e4e4;}</style></def><path class='cls-1' d='M13.6,16.68l0,0a.74.74,0,0,0,.15.86l5.51,5.21a.75.75,0,0,0,1-1.09L15.32,17l4.92-4.74a.75.75,0,1,0-1-1.08l-5.46,5.26,0,0,0,0a.65.65,0,0,0-.1.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+          background: url("../../img/common/page-arrow.png") 0 -68px;
+        }
+      }
+      &.page-next{
+        //background: url("data:image/svg+xml;utf8,<svg class='next-btn' data-name='next-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#ffba17;fill-rule:evenodd;}.cls-2{fill:#e4e4e4;}</style></def><path class='cls-1' d='M20.4,17.32l0,0a.74.74,0,0,0-.15-.86L14.76,11.2a.75.75,0,0,0-1,1.09L18.68,17l-4.92,4.74a.75.75,0,1,0,1,1.08l5.46-5.26,0,0,0,0a.65.65,0,0,0,.1-.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+        background: url("../../img/common/page-arrow.png") -34px 0;
+        &:hover{
+          //background: url("data:image/svg+xml;utf8,<svg class='next-btn' data-name='next-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#ffba17;fill-rule:evenodd;}.cls-2{fill:#ffe7ae;}</style></def><path class='cls-1' d='M20.4,17.32l0,0a.74.74,0,0,0-.15-.86L14.76,11.2a.75.75,0,0,0-1,1.09L18.68,17l-4.92,4.74a.75.75,0,1,0,1,1.08l5.46-5.26,0,0,0,0a.65.65,0,0,0,.1-.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+          background: url("../../img/common/page-arrow.png") -34px -34px;
+        }
+        &.page-btn-disabled{
+          //background: url("data:image/svg+xml;utf8,<svg class='next-btn' data-name='next-btn' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'><def><style>.cls-1{fill:#e4e4e4;fill-rule:evenodd;}.cls-2{fill:#e4e4e4;}</style></def><path class='cls-1' d='M20.4,17.32l0,0a.74.74,0,0,0-.15-.86L14.76,11.2a.75.75,0,0,0-1,1.09L18.68,17l-4.92,4.74a.75.75,0,1,0,1,1.08l5.46-5.26,0,0,0,0a.65.65,0,0,0,.1-.15h0m0,0Z'/><path class='cls-2' d='M17,0A17,17,0,1,0,34,17,17,17,0,0,0,17,0Zm0,32A15,15,0,1,1,32,17,15,15,0,0,1,17,32Z'/></svg>");
+          background: url("../../img/common/page-arrow.png") -34px -68px;
+        }
+      }
+
+      &.page-btn-disabled a{
+        cursor: not-allowed;
+      }
+      //分页悬停样式
+      .page:hover{
+        color: $clrHtmlFont;
+        text-decoration: none;
+      }
+      &.active a.page{
+        color: $clrMain;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // //svg作为元素嵌入上下页a标签时，控制样式
+  ////上下页按钮
+  //svg{
+  //  //默认样式
+  //  &.prev-btn, &.next-btn{
+  //    .cls-1{
+  //      fill:#ffba17;
+  //      fill-rule:evenodd;
+  //    }
+  //    .cls-2{fill:#e4e4e4;}
+  //  }
+  //}
+  ////悬停样式
+  //.page-prev:hover, .page-next:hover{
+  //  .prev-btn, .next-btn{
+  //    .cls-1{
+  //      fill:#ffba17;
+  //    }
+  //    .cls-2{
+  //      fill:#ffe7ae;
+  //    }
+  //  }
+  //}
+  ////不可用的按钮样式
+  //.page-btn-disabled, .page-btn-disabled:hover{
+  //  .prev-btn, .next-btn {
+  //    .cls-2, .cls-1 {
+  //      fill: #e4e4e4;
+  //    }
+  //  }
+  //}
+
+  //分页器滑块
+  .pagination-slider{
+    position: absolute;
+    width: 46px;
+    height: 42px;
+    background: url('../../img/common/oola_logo_page.png') center no-repeat;
+    top: -8px;
+    left: calc(50% - 92px);
+  }
+}

@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import "global.scss";
+
+body{
+  background-color: $clrHtmlBg!important;
+}
+.content-main{
+  padding-top: 0;
+  padding-bottom: $minSpacing*2;
+}
+.order-content{
+  background-color: $clrWhiteBg;
+  padding: 0 $minSpacing*2;
+}
+.section-title{
+  @extend %fontNormal;
+  font-weight: bold;
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+}
+.order-section{
+  padding: $minSpacing $minSpacing*2 0;
+  border-bottom: 1px solid #fff;
+}
+
+.form-horizontal{
+  select.form-control{
+    display: inline-block;
+    float: left;
+    width: 156px;
+    margin-bottom: 5px;
+    & + select.form-control{
+      margin-left: $minSpacing*2;
+    }
+  }
+  .control-label{
+    max-width: 100px;
+  }
+}
+
+// 地址栏
+.form-address{
+  .addr-existing{
+    &>label{
+      width: calc(100% - 26px);
+    }
+  }
+  .addr-form{
+    margin-top: $minSpacing*2;
+    .col-sm-offset-2 {
+      margin-left: 100px;
+    }
+  }
+  input[type="radio"]:checked + label + .addr-form{
+    display: block;
+  }
+}
+
+// 订单详情
+.form-od-detail{
+  a.btn-get{
+    margin: 0 $minSpacing*2;
+  }
+  .tips{
+    color: $clrCancel;
+    line-height: $minSpacing*3;
+  }
+}
+//添加备注
+textarea.ipt-remarks{
+  height: 96px;
+  margin-right: $minSpacing*2;
+  margin-bottom: $minSpacing/2;
+  -webkit-transition: height ease 0.2s;
+  -moz-transition: height ease 0.2s;
+  -ms-transition: height ease 0.2s;
+  -o-transition: height ease 0.2s;
+  transition: height ease 0.2s;
+  //提示文案的高度决定文本框伸缩效果
+  //height: 36px;
+  //overflow: hidden;
+  //&:focus{
+  //  height: 132px;
+  //  overflow: visible;
+  //}
+}
+.word-count{
+  color: $clrHtmlRed;
+}
+.tips.remarks-tips{
+  width: calc(100% - 360px);
+  font-size: 12px;
+  line-height: 24px;
+}
+
+
+//第三方支付
+ul.dowebok{
+  li{
+    display: inline-block;
+    float: left;
+    margin-right: $minSpacing*2;
+    input.labelauty + label
+    {
+      display: block;
+      margin-bottom: 0px;
+      background-color: #ffffff;
+      color: $clrHtmlRed;
+      cursor: pointer;
+      height: 36px;
+      line-height: 36px;
+      border: 1px solid $clrFormBorder;
+
+      border-radius: 2px;
+      -moz-border-radius: 2px;
+      -webkit-border-radius: 2px;
+
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image,
+    input.labelauty + label > span.labelauty-checked-image
+    {
+      width: 12px;
+      height: 12px;
+      vertical-align: initial;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+    {
+      vertical-align: middle;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked>img,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked>img{
+      vertical-align: middle;
+      margin-bottom: 4px;
+    }
+
+    input.labelauty:not(:checked):not([disabled]) + label:hover
+    {
+      box-shadow: 0px 0px 4px $clrFormBorder inset;
+      background-color: #ffffff;
+      color: $clrHtmlRed;
+    }
+
+    input.labelauty:checked + label
+    {
+      box-shadow: 0px 0px 4px 0px $clrFormBorder inset;
+    }
+
+    input.labelauty:checked:not([disabled]) + label:hover
+    {
+      background-color: #ffffff;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image
+    {
+      background-image: url( ../../img/common/input-unchecked.png );
+    }
+
+    input.labelauty + label > span.labelauty-checked-image
+    {
+      background-image: url( ../../img/common/input-checked.png );
+    }
+  }
+}
+//payment radio css
+ul.way-payment{
+  li{
+    margin-bottom: $minSpacing;
+    input.labelauty + label{
+      padding: 0 $minSpacing;
+      min-width: 156px;
+    }
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
+      margin-left: $minSpacing;
+    }
+  }
+}
+
+.table.oola-table-order{
+  thead{
+    background: $clrTableYellow;
+    th{
+      @extend %fontNormal;
+      color: $clrHtmlFont!important;
+      border-bottom: 0!important;
+      padding: 8px;
+      text-align: center;
+    }
+  }
+  tr>td{
+    &:first-child{
+      text-align: left;
+    }
+    padding: $minSpacing*2;
+    text-align: center;
+    .product-img{
+      display: inline-block;
+      width: 61px;
+      height: 61px;
+      margin-right: 18px;
+      vertical-align: middle;
+    }
+    .product-name{
+      vertical-align: middle;
+      display: inline-block;
+    }
+    >span.num{
+      color: $clrMain;
+    }
+  }
+  .counter-td{
+    height: 36px;
+    line-height: 36px;
+    background-color: $clrTableYellow;
+    padding: 0;
+  }
+}

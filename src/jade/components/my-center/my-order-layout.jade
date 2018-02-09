@@ -1,0 +1,76 @@
+//
+   Created by jingyi_h on 2016/12/19.
+extends ../../layout
+
+block append oolaCss
+    link(rel="stylesheet" href="./dist/css/my-order.css")
+
+block main
+    .breadcrumb-cont
+        .content-area.mar-cent
+            .oola-breadcrumbs
+                ul.breadcrumb.clearfix
+                    li: a(href="#") 个人中心
+                    li: a(href="#") 我的回收
+                    li.current-pos 订单详情
+    section.content-main
+        .order-content.content-area.mar-cent.clearfix
+            //流程图
+            block flowChart
+            //订单信息
+            .order-info
+                h2.section-title 订单信息
+                .order-section.clearfix
+                    //回收商信息
+                    .recyclers-info.fl
+                        .rcl-logo.fl
+                            img(src="img/recycle/rcl-01.jpg")
+                        .rcl-detail.fl
+                            h2 国美电器回收
+                            p 回收方式
+                                span 上门服务
+                            p 订单数量
+                                span 1,635单
+                            p 好评度
+                                //星星等级添加对应的类名(class="star-grd-n")，n从1到5
+                                span.star-grade.star-grd-4-5
+                        .rcl-contact
+                            p 联系人
+                                span 带大餐
+                            p 联系电话
+                                span 21234683416
+                            p 收件地址
+                                span 广东省广州市越秀区黄花岗街道6789号1002铺
+                    //订单状态更新栏
+                    .order-status-update.fl
+                        block statusBar
+            //商品详情
+            .product-info
+                h2.section-title 商品详情
+                .order-section
+                    table.table.oola-table.oola-table-order
+                        thead
+                            th 物品
+                            th 回收价格
+                            th 评估描述情况
+                        //一行产品详情，可循环
+                        tr
+                            td
+                                img.product-img(src="img/recycle/pic-item.jpg")
+                                p.product-name 二手苹果iPhone6
+                            td
+                                span.num 2300
+                                | 积分
+                            td
+                                -var descList = ["外壳完好","官网购买","开机正常","外壳完好","触摸正常","保修一个月内","配件齐全"]
+                                ul.desc.clearfix
+                                    each item in descList
+                                        li= item
+                        //最后一行，统计产品数量以及总价
+                        tr
+                            td.counter-td(colspan="3")
+                                | 1件产品，总计回收价格
+                                span.num 2300
+                                | 积分
+
+block append oolaScripts

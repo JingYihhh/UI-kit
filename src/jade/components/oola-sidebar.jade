@@ -1,0 +1,35 @@
+//
+   Created by Jingyi on 2016-8-24.
+
+mixin oolaNavSidebar(clazzName, num, categoryList, categorySubList)
+    .category-cont(class=clazzName)
+            h2.side-title 全部分类
+            each category, index in categoryList
+                if index == 0
+                    dl
+                        dt.clearfix
+                            span.category-icon.fl(class="icon-#{index + 1}")
+                            h2: a.fl #{category}
+                            i.symbol.fr
+                        dd.clearfix
+                            each subCategory, index in categorySubList
+                                if index == 0
+                                    a.fl.on #{subCategory}
+                                else
+                                    a.fl #{subCategory}
+                else
+                    dl
+                        dt.clearfix
+                            span.category-icon.fl(class="icon-#{index + 1}")
+                            h2: a.fl #{category}
+                            i.symbol.fr
+                        if (num)
+                            -for(var i = 0;i<num; i++)
+                                //此部分为二级列表dd，可循环，每个dd列表最多嵌套8个a标签，最多3个dd列表
+                                dd.clearfix
+                                    each subCategory in categorySubList
+                                        a.fl #{subCategory}
+                        else
+                            dd.clearfix
+                                each subCategory in categorySubList
+                                    a.fl #{subCategory}

@@ -1,0 +1,455 @@
+// Created by Jingyi on 2016-9-13.
+extends components/layout
+block append css
+	link(rel="stylesheet" href="dist/css/u-typography.css")
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
+
+block main
+	//include components/oola-sidebar
+	.content-area.mar-cent.typography-cont
+		section#breadcrumbs
+			h2.typography-sub-heading Breadcrumbs 面包屑
+			.oola-breadcrumbs
+				ul.breadcrumb.clearfix
+					li: a(href="#") 首页
+					li: a(href="#") 二级页
+					li.current-pos 当前页
+			.source-code-cont
+				h3 HTML
+				pre
+					code.html.
+						&lt;div class=&quot;oola-breadcrumbs&quot;&gt;
+						  &lt;ul class=&quot;breadcrumb clearfix&quot;&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;二级页&lt;/a&gt;&lt;/li&gt;
+						    &lt;li class=&quot;current-pos&quot;&gt;当前页&lt;/li&gt;
+						  &lt;/ul&gt;
+						&lt;/div&gt;
+		section#typesetting
+			h2.typography-sub-heading Typesetting 排版
+			.heading-cont
+				h1.head-title #{'<h1 class="head-title">一级标题</h1>'}
+				h2 #{'<h2>二级标题</h2>'}
+				h3 #{'<h3>小标题</h3>'}
+				h3.subtitle #{'<h3 class="subtitle">带样式的小标题</h3>'}
+				p #{'<p>普通段落</p>'}
+				a.link(href="#") #{'<a href="#" class="link">普通链接</a>'}
+				a.link.disabled(href="#") #{'<a href="#" class="link disabled">无效链接</a>'}
+		section#button
+			h2.typography-sub-heading Button 按钮
+			.button-cont
+				include components/m-oola-button
+				.oola-btn-group
+					+createButton("小尺按钮", "btn-s")
+					+createButton("主题按钮", "btn-s btn-main")
+					+createButton("红色按钮", "btn-s btn-red")
+					+createButton("绿色按钮", "btn-s btn-green")
+					+createButton("灰色按钮", "btn-s btn-gray")
+					+createButton("禁用按钮", "btn-s btn-gray disabled")
+				.oola-btn-group
+					a.oola-btn 默认按钮
+					a.oola-btn.btn-main 主题按钮
+					+createButton("红色按钮", "btn-red")
+					+createButton("绿色按钮", "btn-green")
+					a.oola-btn.btn-gray 灰色按钮
+					a.oola-btn.btn-gray.disabled 禁用按钮
+				.oola-btn-group
+					a.oola-btn.btn-l 大尺按钮
+					a.oola-btn.btn-main.btn-l 主题按钮
+					a.oola-btn.btn-red.btn-l 红色按钮
+					a.oola-btn.btn-green.btn-l 绿色按钮
+					a.oola-btn.btn-gray.btn-l 灰色按钮
+					a.oola-btn.btn-gray.disabled.btn-l 禁用按钮
+			.source-code-cont
+				h3 HTML
+				pre
+					code.html.
+						&lt;div class=&quot;oola-btn-group&quot;&gt;
+						  &lt;a class=&quot;oola-btn btn-s&quot;&gt;小尺按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-s btn-main&quot;&gt;主题按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-s btn-gray&quot;&gt;灰色按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-s btn-gray disabled&quot;&gt;禁用按钮&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;oola-btn-group&quot;&gt;
+						  &lt;a class=&quot;oola-btn&quot;&gt;默认按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-main&quot;&gt;主题按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-gray&quot;&gt;灰色按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-gray disabled&quot;&gt;禁用按钮&lt;/a&gt;
+						&lt;/div&gt;
+						&lt;div class=&quot;oola-btn-group&quot;&gt;
+						  &lt;a class=&quot;oola-btn btn-l&quot;&gt;大尺按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-main btn-l&quot;&gt;主题按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-gray btn-l&quot;&gt;灰色按钮&lt;/a&gt;
+						  &lt;a class=&quot;oola-btn btn-gray disabled btn-l&quot;&gt;禁用按钮&lt;/a&gt;
+						&lt;/div&gt;
+		section#modal
+			h2.typography-sub-heading Modal 模态框
+			.modal-cont
+				include components/oola-modal
+				+oolaModal("sm")
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+							  &lt;div class=&quot;modal-dialog oola-modal-sm&quot;&gt;
+							    &lt;div class=&quot;modal-content&quot;&gt;
+							      &lt;div class=&quot;modal-header&quot;&gt;
+							        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+							        &lt;h4 class=&quot;modal-title&quot;&gt;小弹框&lt;/h4&gt;
+							      &lt;/div&gt;
+							      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+							      &lt;!--可选的弹层底栏--&gt;
+							      &lt;div class=&quot;modal-footer&quot;&gt;
+							        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+							      &lt;/div&gt;
+							    &lt;/div&gt;
+							  &lt;/div&gt;
+							&lt;/div&gt;
+				+oolaModal("smd")
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+							  &lt;div class=&quot;modal-dialog oola-modal-md&quot;&gt;
+							    &lt;div class=&quot;modal-content&quot;&gt;
+							      &lt;div class=&quot;modal-header&quot;&gt;
+							        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+							        &lt;h4 class=&quot;modal-title&quot;&gt;中弹框&lt;/h4&gt;
+							      &lt;/div&gt;
+							      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+							      &lt;!--可选的弹层底栏--&gt;
+							      &lt;div class=&quot;modal-footer&quot;&gt;
+							        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+							      &lt;/div&gt;
+							    &lt;/div&gt;
+							  &lt;/div&gt;
+							&lt;/div&gt;
+				+oolaModal("md")
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+							  &lt;div class=&quot;modal-dialog oola-modal-lg&quot;&gt;
+							    &lt;div class=&quot;modal-content&quot;&gt;
+							      &lt;div class=&quot;modal-header&quot;&gt;
+							        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+							        &lt;h4 class=&quot;modal-title&quot;&gt;大弹框&lt;/h4&gt;
+							      &lt;/div&gt;
+							      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+							      &lt;!--可选的弹层底栏--&gt;
+							      &lt;div class=&quot;modal-footer&quot;&gt;
+							        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+							      &lt;/div&gt;
+							    &lt;/div&gt;
+							  &lt;/div&gt;
+							&lt;/div&gt;
+		section#table
+			h2.typography-sub-heading Table 表格
+			include components/oola-table
+			-var tHeader = ["机构名称", "招聘岗位", "招聘人数", "发布时间"]
+			-var tCell = ["斯坦福亚裔肝脏中心", "实习生/志愿者", "若干人", "2014-07-15"]
+			.table-cont
+				+oolaTable('', tHeader, tCell)
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;table class=&quot;table oola-table&quot;&gt;
+							  &lt;thead&gt;
+							    &lt;tr&gt;
+							      &lt;th&gt;机构名称&lt;/th&gt;
+							      &lt;th&gt;招聘岗位&lt;/th&gt;
+							      &lt;th&gt;招聘人数&lt;/th&gt;
+							      &lt;th&gt;发布时间&lt;/th&gt;
+							    &lt;/tr&gt;
+							  &lt;/thead&gt;
+							  &lt;tbody&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+							      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-07-15&lt;/td&gt;
+							    &lt;/tr&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;联合国教科文&lt;/td&gt;
+							      &lt;td&gt;志愿者教师&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-04-01&lt;/td&gt;
+							    &lt;/tr&gt;
+							  &lt;/tbody&gt;
+							&lt;/table&gt;
+				+oolaTable("oola-table-row", tHeader, tCell)
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;table class=&quot;table oola-table oola-table-row&quot;&gt;
+							  &lt;thead&gt;
+							    &lt;tr&gt;
+							      &lt;th&gt;机构名称&lt;/th&gt;
+							      &lt;th&gt;招聘岗位&lt;/th&gt;
+							      &lt;th&gt;招聘人数&lt;/th&gt;
+							      &lt;th&gt;发布时间&lt;/th&gt;
+							    &lt;/tr&gt;
+							  &lt;/thead&gt;
+							  &lt;tbody&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+							      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-07-15&lt;/td&gt;
+							    &lt;/tr&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;联合国教科文&lt;/td&gt;
+							      &lt;td&gt;志愿者教师&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-04-01&lt;/td&gt;
+							    &lt;/tr&gt;
+							  &lt;/tbody&gt;
+							&lt;/table&gt;
+				+oolaTable("oola-table-bordered", tHeader, tCell)
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;table class=&quot;table oola-table oola-table-bordered&quot;&gt;
+							  &lt;thead&gt;
+							    &lt;tr&gt;
+							      &lt;th&gt;机构名称&lt;/th&gt;
+							      &lt;th&gt;招聘岗位&lt;/th&gt;
+							      &lt;th&gt;招聘人数&lt;/th&gt;
+							      &lt;th&gt;发布时间&lt;/th&gt;
+							    &lt;/tr&gt;
+							  &lt;/thead&gt;
+							  &lt;tbody&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+							      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-07-15&lt;/td&gt;
+							    &lt;/tr&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;联合国教科文&lt;/td&gt;
+							      &lt;td&gt;志愿者教师&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-04-01&lt;/td&gt;
+							    &lt;/tr&gt;
+							  &lt;/tbody&gt;
+							&lt;/table&gt;
+				+oolaTable("oola-table-hover", tHeader, tCell)
+				.source-code-cont
+					h3 HTML
+					pre
+						code.html.
+							&lt;table class=&quot;table oola-table oola-table-hover&quot;&gt;
+							  &lt;thead&gt;
+							    &lt;tr&gt;
+							      &lt;th&gt;机构名称&lt;/th&gt;
+							      &lt;th&gt;招聘岗位&lt;/th&gt;
+							      &lt;th&gt;招聘人数&lt;/th&gt;
+							      &lt;th&gt;发布时间&lt;/th&gt;
+							    &lt;/tr&gt;
+							  &lt;/thead&gt;
+							  &lt;tbody&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+							      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-07-15&lt;/td&gt;
+							    &lt;/tr&gt;
+							    &lt;tr&gt;
+							      &lt;td&gt;联合国教科文&lt;/td&gt;
+							      &lt;td&gt;志愿者教师&lt;/td&gt;
+							      &lt;td&gt;若干人&lt;/td&gt;
+							      &lt;td&gt;2014-04-01&lt;/td&gt;
+							    &lt;/tr&gt;
+							  &lt;/tbody&gt;
+							&lt;/table&gt;
+		section#notification
+			h2.typography-sub-heading Notification 信息提示（弹框）
+			.notice-cont
+				p.notice-block 文本提示基类class="notice-block"
+				p.notice-block.info-notice class="notice-block info-notice"
+				p.notice-block.success-notice class="notice-block success-notice"
+				p.notice-block.warning-notice class="notice-block warning-notice"
+				p.notice-block.error-notice class="notice-block error-notice"
+			.source-code-cont
+				h3 HTML
+				pre
+					code.html.
+						&lt;div class=&quot;notice-cont&quot;&gt;
+						  &lt;p class=&quot;notice-block&quot;&gt;文本提示基类class=&quot;notice-block&quot;&lt;/p&gt;
+						  &lt;p class=&quot;notice-block info-notice&quot;&gt;class=&quot;notice-block info-notice&quot;&lt;/p&gt;
+						  &lt;p class=&quot;notice-block success-notice&quot;&gt;class=&quot;notice-block success-notice&quot;&lt;/p&gt;
+						  &lt;p class=&quot;notice-block warning-notice&quot;&gt;class=&quot;notice-block warning-notice&quot;&lt;/p&gt;
+						  &lt;p class=&quot;notice-block error-notice&quot;&gt;class=&quot;notice-block error-notice&quot;&lt;/p&gt;
+						&lt;/div&gt;
+		section#form
+			h2.typography-sub-heading Form 表单
+			include components/m-oola-form
+			form.form-horizontal
+				+createFormGroup("手机号：", false)
+					p.form-control-static 158****7117
+				+createFormGroup("姓名：", false, true, "姓名不能为空！")
+					input.form-control(placeholder="请输入您的姓名")
+				+createFormGroup("邮箱：", false, false, "邮箱不能为空！")
+					.input-group
+						input.form-control(type="text" placeholder="请输入您的邮箱")
+						span.input-group-addon
+							span.glyphicon.glyphicon-envelope
+				+createFormGroup("工作：", false, false)
+					+createSltControl(["Web前端", "IOS开发", "Android开发"])
+				+createFormGroup("性别：", false)
+					+createRadio("sex", "male", "男", true)
+					+createRadio("sex", "female", "女", true)
+				+createFormGroup("爱好：", false)
+					+createCheckbox("football", "足球", true)
+					+createCheckbox("basketball", "篮球", true)
+					+createCheckbox("music", "音乐", true)
+					+createCheckbox("draw", "画画", true)
+				+createFormGroup("简介：", false, false, "简介不能为空！")
+					textarea.form-control(placeholder="请输入自我简介")
+				+createFormGroup("", true, true, "请勾选同意协议！")
+					+createCheckbox("agree", "同意XXX协议", false)
+				+createFormGroup("",true, false)
+					button.oola-btn(type="submit" disabled) 提交
+			.source-code-cont
+				h3 HTML
+				pre
+					code.html.
+						&lt;form class=&quot;form-horizontal&quot;&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;手机号：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10&quot;&gt;
+						      &lt;p class=&quot;form-control-static&quot;&gt;158****7117&lt;/p&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;姓名：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10&quot;&gt;
+						      &lt;input placeholder=&quot;请输入您的姓名&quot; class=&quot;form-control&quot;&gt;
+						      &lt;div class=&quot;help-block&quot;&gt;姓名不能为空！&lt;/div&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;邮箱：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10 has-error&quot;&gt;
+						      &lt;div class=&quot;input-group&quot;&gt;
+						        &lt;input type=&quot;text&quot; placeholder=&quot;请输入您的邮箱&quot; class=&quot;form-control&quot;&gt;&lt;span class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-envelope&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+						      &lt;/div&gt;
+						      &lt;div class=&quot;help-block&quot;&gt;邮箱不能为空！&lt;/div&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;工作：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10&quot;&gt;
+						      &lt;select class=&quot;form-control&quot;&gt;
+						        &lt;option&gt;IOS开发&lt;/option&gt;
+						        &lt;option&gt;Web前端开发Web前端开发Web前端开发Web前端开发Web前端开发Web前端开发&lt;/option&gt;
+						        &lt;option&gt;Android开发&lt;/option&gt;
+						      &lt;/select&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;性别：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10&quot;&gt;
+						      &lt;label class=&quot;radio-inline&quot;&gt;
+						        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot; id=&quot;female&quot; checked=&quot;checked&quot;&gt;
+						        &lt;label for=&quot;female&quot;&gt;&lt;/label&gt;女
+						      &lt;/label&gt;
+						      &lt;label class=&quot;radio-inline&quot;&gt;
+						        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot; id=&quot;male&quot;&gt;
+						        &lt;label for=&quot;male&quot;&gt;&lt;/label&gt;男
+						      &lt;/label&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;简介：&lt;/label&gt;
+						    &lt;div class=&quot;col-sm-10&quot;&gt;
+						      &lt;textarea rows=&quot;3&quot; placeholder=&quot;请输入自我简介&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+						      &lt;div class=&quot;help-block&quot;&gt;简介不能为空！&lt;/div&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+						      &lt;div class=&quot;checkbox&quot;&gt;
+						        &lt;label&gt;
+						          &lt;input type=&quot;checkbox&quot; id=&quot;agree&quot;&gt;
+						          &lt;label for=&quot;agree&quot;&gt;&lt;/label&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Agree the Protocol&lt;/a&gt;
+						        &lt;/label&gt;
+						      &lt;/div&gt;
+						      &lt;div class=&quot;help-block&quot;&gt;请勾选同意协议！&lt;/div&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						  &lt;div class=&quot;form-group&quot;&gt;
+						    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+						      &lt;button type=&quot;submit&quot; class=&quot;oola-btn&quot;&gt;Submit&lt;/button&gt;
+						    &lt;/div&gt;
+						  &lt;/div&gt;
+						&lt;/form&gt;
+		section#pagination
+			h2.typography-sub-heading Pagination 分页器
+			include components/oola-pagination
+			.source-code-cont
+				h3 HTML
+				pre
+					code.html.
+						&lt;div class=&quot;oola-pagination&quot;&gt;
+						  &lt;ul class=&quot;fl&quot;&gt;
+						    &lt;div class=&quot;pagination-slider&quot;&gt;&lt;/div&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page-prev page-btn-disabled&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+						    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+						    ...
+						    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
+						    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page-next&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+						  &lt;/ul&gt;
+						&lt;/div&gt;
+		section#graphic
+			h2.typography-sub-heading Graphic 图文
+			.test-cont(style="margin: 0")
+			include components/m-oola-figure
+			h3.subtitle 资讯列表
+			.news-list.clearfix
+				- var val = 0
+				while val < 5
+					if val == 0
+						+oolaFigure("news-item first-news","img/index/news-01.jpg","资讯项目名称","资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍")
+					+oolaFigure("news-item","img/index/news-02.jpg","资讯项目名称","资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍")
+			h3.subtitle 产品列表
+			.product-list.clearfix
+				-for(var i = 0; i < 5; i++)
+					+oolaFigure("product-item","img/index/product-01.jpg","环保绿色宝宝洗面奶")
+						p.figure-desc
+							span 价格：
+							span 55积分
+			include components/recycle/recycle-comment
+			h3.subtitle 评价列表
+			.comment-list.clearfix
+				-for(var i = 0; i < 5; i++)
+					+recycleComment("hover-shadow")
+		section#progress-bar
+			h2.typography-sub-heading Progress Bar 进度条
+			.progress-cont
+				.progress
+					.progress-bar(role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;") 40% class="progress-bar"
+				.progress
+					.progress-bar.progress-bar-striped(role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;") 50% class="progress-bar progress-bar-striped"
+				.progress
+					.progress-bar.progress-bar-striped.active(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;") 60% class="progress-bar progress-bar-striped active"
+				script(type='text/html' style='display:block')
+					<input type="text" />
+block append scripts
+	script(src="js/components/oola-pagination.js")
+	script(src="js/plugins/highlight.pack.js")
+	script.
+		$(document).ready(function() {
+			$('pre code').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
+			oolaPagination();
+		});

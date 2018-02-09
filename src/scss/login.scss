@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import "global";
+
+//主登录页样式
+.main-login-wrap{
+  position: relative;
+  overflow: hidden;
+  perspective: 2000px;
+
+  height: 568px;
+  width: 100%;
+
+  .login-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url("../../img/common/login/login-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 10%;
+  }
+  .modal.oola-login-cont{
+    position: static;
+    float: right;
+    background-color: transparent;
+    .modal-dialog{
+      margin: 60px 105px 60px 0;
+    }
+    .modal-header .close span{
+      display: none;
+    }
+  }
+}
+
+//登录页的页尾样式
+.footer,
+.common-footer{
+  background-color: transparent;
+
+  .logo-sxb,
+  .share-cont{
+    display: none;
+  }
+
+  .info-cont{
+    ul.links-cont li a:hover,
+    a:hover{
+      color: $clrNavFont;
+      text-decoration: underline;
+    }
+  }
+}

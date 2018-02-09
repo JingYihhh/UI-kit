@@ -1,0 +1,13 @@
+//
+   Created by jingyi_h on 2016/12/14.
+
+mixin createMyCenterBox(title)
+    .my-center-box
+        .box-header.clearfix
+            h3.subtitle.fl= title
+            ul.box-tab.fr
+                li.active: a(href="javascript:void(0);") 我参与的
+                li: a(href="javascript:void(0);") 您可以关注
+        .box-body
+            if block
+                block

@@ -1,0 +1,21 @@
+//  Created by Dicky on 2016/10/12.
+
+.swiper-multi-pic{
+  width: 1176px;
+}
+
+.swiper-pagination-multi-pic{
+  margin-top: 5px;
+  text-align: center;
+  .swiper-pagination-bullet {
+    height: 10px;
+    width: 120px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin: $minSpacing;
+  }
+  .swiper-pagination-bullet-active {
+    background: $clrMain;
+  }
+}

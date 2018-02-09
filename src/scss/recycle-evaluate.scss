@@ -1,0 +1,166 @@
+@charset "UTF-8";
+@import "global.scss";
+
+// layout
+body{
+  background-color: $clrHtmlBg!important;
+}
+.section-title{
+  @extend %fontNormal;
+  font-weight: bold;
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+}
+.order-section{
+  padding: $minSpacing*2 $minSpacing*2 0;
+}
+
+//product preview css
+.prod-preview{
+  background: $clrWhiteBg;
+  padding: $minSpacing*2;
+  img.prod-img{
+    width: 214px;
+    height: 214px;
+    border: 1px solid $clrBorder;
+  }
+}
+.preview-txt{
+  width: calc(100% - 238px);
+  margin-left: $minSpacing*2;
+  h2{
+    @extend %fontH3;
+    font-weight: bold;
+    margin-bottom: $minSpacing*2;
+  }
+  a.re-select{
+    @extend %fontNormal;
+    color: $clrHtmlBlue;
+    display: block;
+    margin-top: $minSpacing/2;
+  }
+  p{
+    margin-top: $minSpacing/2;
+  }
+  .average-price, .add-up{
+    @extend %fontNormal;
+    color: $clrCancel;
+    .data-placeholder{
+      color: $clrMain;
+      margin-left: $minSpacing;
+    }
+  }
+  .question a{
+    display: inline-block;
+    margin: 3px 6px 0 12px;
+  }
+  #question-tip{
+    display: none;
+    color: $clrCancel;
+  }
+  .question a:hover + #question-tip{
+    display: inline;
+  }
+}
+
+//product information
+.prod-msg{
+  padding: 0 $minSpacing*2 $minSpacing*2;
+  margin: $minSpacing*2 0;
+  background: $clrWhiteBg;
+  .form-group{
+    margin-bottom: 0;
+  }
+  .eval-label{
+    margin-bottom: $minSpacing*2;
+    color: $clrNavFont;
+    font-weight: bold;
+  }
+}
+.help-block{
+  font-size: 12px;
+  img{
+    width: 12px;
+    height: 12px;
+    margin: 0 4px 0 12px;
+  }
+}
+
+//input radio css
+ul.dowebok{
+  li{
+    display: inline-block;
+    float: left;
+    margin: 0 $minSpacing*2 $minSpacing*2 0;
+    input.labelauty + label
+    {
+      position: relative;
+      display: block;
+      @extend %fontNormal;
+      font-weight: normal;
+      padding: 0 20px;
+      margin: 0;
+      background-color: #ffffff;
+      text-align: center;
+      cursor: pointer;
+      min-width: 156px;
+      height: $minSpacing*3;
+      line-height: $minSpacing*3;
+      border: 1px solid $clrBorder;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image,
+    input.labelauty + label > span.labelauty-checked-image
+    {
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      margin-top: -6px;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked
+    {
+      line-height: $minSpacing*3;
+      margin-left: 6px;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked>img,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked>img{
+      vertical-align: middle;
+      margin-bottom: 4px;
+    }
+
+    input.labelauty:not(:checked):not([disabled]) + label:hover
+    {
+      border-color: $clrMain;
+      background-color: #ffffff;
+    }
+
+    input.labelauty:checked + label
+    {
+      border-color: $clrMain;
+      color: $clrHtmlRed;
+    }
+
+    input.labelauty:checked:not([disabled]) + label:hover
+    {
+      background-color: #ffffff;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image
+    {
+      background-image: url( ../../img/common/input-unchecked.png );
+    }
+
+    input.labelauty + label > span.labelauty-checked-image
+    {
+      background-image: url( ../../img/common/input-checked.png );
+    }
+    input[type="checkbox"]:checked + label:before{
+      content: none;
+    }
+  }
+}

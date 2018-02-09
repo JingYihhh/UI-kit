@@ -1,0 +1,13 @@
+//
+   Created by Jingyi on 2016-9-28.
+mixin oolaTable(className, tHeader, tCell)
+    table.table.oola-table(class=className)
+        thead
+            tr
+                each item in tHeader
+                    th!= item
+        tbody
+            -for(var i  = 0; i < 5; i++)
+                tr
+                    each item in tCell
+                        td!= item

@@ -1,0 +1,171 @@
+@charset "UTF-8";
+
+$ShadowWid: 400px;
+
+.oola-btn {
+  //默认状态
+  position: relative;
+  @extend %fontNormal;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 1;
+  padding: 7px 21px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  background-color: $clrMain;
+  border: 1px solid $clrMain;
+  -webkit-border-radius: 2px!important;
+  -moz-border-radius: 2px!important;
+  border-radius: 2px!important;
+  color: $clrMain!important;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  &+&{
+    margin-left: $minSpacing;
+  }
+  &:focus, &:active:focus, &.active:focus,
+  &.focus, &:active.focus, &.active.focus{
+    outline: none;
+  }
+  &:active, &.active{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  }
+  &:after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: $ShadowWid;
+    height: $ShadowWid;
+    line-height: $ShadowWid;
+    top: 50%;
+    left: 50%;
+    margin-top: -$ShadowWid/2;
+    margin-left: -$ShadowWid/2;
+    border-radius: 50%;
+    -webkit-transition: box-shadow cubic-bezier(1, 0.26, 0, 0.72) 0.5s;
+    -moz-transition: box-shadow cubic-bezier(1, 0.26, 0, 0.72) 0.5s;
+    -ms-transition: box-shadow cubic-bezier(1, 0.26, 0, 0.72) 0.5s;
+    -o-transition: box-shadow cubic-bezier(1, 0.26, 0, 0.72) 0.5s;
+    transition: box-shadow cubic-bezier(1, 0.26, 0, 0.72) 0.5s;
+    z-index: -1;
+    box-shadow: inset 0 0 0 $ShadowWid/2 $clrWhiteBg;
+  }
+  &:hover{
+    color: $clrWhiteBg!important;
+    &:after{
+      box-shadow: inset 0 0 0 0 $clrMain;
+    }
+  }
+
+  //按钮颜色
+  &.btn-main{
+    color: $clrWhiteBg!important;
+    background-color: $clrWhiteBg!important;
+    border-color: $clrMain;
+    &:after{
+      box-shadow: inset 0 0 0 $ShadowWid/2 $clrMain;
+    }
+    &:hover{
+      color: $clrMain!important;
+      &:after{
+        box-shadow: inset 0 0 0 0 $clrWhiteBg;
+      }
+    }
+  }
+  &.btn-gray{
+    color: $clrWhiteBg!important;
+    background-color: $clrWhiteBg;
+    border-color: $clrCancel;
+    &:after{
+      box-shadow: inset 0 0 0 $ShadowWid/2 $clrCancel;
+    }
+    &:hover{
+      color: $clrCancel!important;
+      &:after{
+        box-shadow: inset 0 0 0 0 $clrWhiteBg;
+      }
+    }
+  }
+  &.btn-red{
+    color: $clrWhiteBg!important;
+    background-color: $clrWhiteBg;
+    border-color: $clrHtmlRed;
+    &:after{
+      box-shadow: inset 0 0 0 $ShadowWid/2 $clrHtmlRed;
+    }
+    &:hover{
+      color: $clrHtmlRed!important;
+      &:after{
+        box-shadow: inset 0 0 0 0 $clrWhiteBg;
+      }
+    }
+  }
+  &.btn-green{
+    color: $clrWhiteBg!important;
+    background-color: $clrWhiteBg;
+    border-color: $clrGreen;
+    &:after{
+      box-shadow: inset 0 0 0 $ShadowWid/2 $clrGreen;
+    }
+    &:hover{
+      color: $clrGreen!important;
+      &:after{
+        box-shadow: inset 0 0 0 0 $clrWhiteBg;
+      }
+    }
+  }
+
+  //禁用状态
+  &.disabled,
+  &[disabled]{
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+    color: $clrWhiteBg!important;
+    background-color: rgba($clrCancel, .8)!important;
+    border-color: $clrCancel;
+    &:after{
+      display: none;
+    }
+    &:hover{
+      color: $clrWhiteBg!important;
+    }
+  }
+
+  //按钮尺寸
+  &.btn-s {
+    padding: $minSpacing/2 $minSpacing;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+  }
+  &.btn-m{
+    padding: 7px 21px;
+  }
+  &.btn-l {
+    font-size: 14px;
+    padding: 10px 31px;
+  }
+}
+
+.oola-btn-group{
+  margin: $minSpacing 0;
+}

@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+
+body{
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.welcome-container{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+$clrArr: #509cb9, #fec236, #ff6d2d;
+.block-link{
+  a{
+    position: absolute;
+    display: block;
+    top: 25%;
+    margin-left: 40px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all ease .125s;
+    -moz-transition: all ease .125s;
+    -ms-transition: all ease .125s;
+    -o-transition: all ease .125s;
+    transition: all ease .125s;
+    &:hover{
+      animation: txtHover 0.3s ease forwards;
+    }
+    >img{
+      max-width: 100%;
+    }
+  }
+  &.link-phone a{
+    top: 156px;
+    //left: 56px;
+    left: 142px;
+  }
+  &.link-clothes a{
+    top: 526px;
+    //left: 84px;
+    left: 160px;
+  }
+  &.link-other a{
+    top: 285px;
+    //right: 100px;
+    right: 175px;
+  }
+}
+
+.page{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1580px;
+  height: 872px;
+  margin-top: -436px;
+  margin-left: -790px;
+  overflow: hidden;
+  >img{
+    max-width: 100%;
+  }
+  &:not(#cover-page){
+    display: none;
+  }
+}
+.btn-skip, .btn-return{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+@media screen and (min-width: 1024px) and (max-width: 1588px){
+  .btn-skip, .btn-return{
+    position: fixed;
+    bottom: 5%;
+    right: 12px;
+  }
+}
+
+#cover-page{
+  background: url("../../img/welcome/frame.jpg") no-repeat center center;
+}
+
+@-webkit-keyframes txtHover {
+  30%{-webkit-transform: scale(1.1);}
+  70%{-webkit-transform: scale(1);}
+  100%{-webkit-transform: scale(1.1);}
+}
+@-moz-keyframes txtHover {
+  30%{-moz-transform: scale(1.1);}
+  70%{-moz-transform: scale(1);}
+  100%{-moz-transform: scale(1.1);}
+}
+@keyframes txtHover {
+  30%{transform: scale(1.1);}
+  70%{transform: scale(1);}
+  100%{transform: scale(1.1);}
+}
+
+.page .img-cont{
+  position: relative;
+}
+// 云朵
+.cloud{
+  position: absolute;
+  &.cloud-01{
+    left: 0;
+    top: 0;
+    -webkit-animation: cloudFloat1 4s linear infinite;
+    -moz-animation: cloudFloat1 4s linear infinite;
+    animation: cloudFloat1 4s linear infinite;
+  }
+  &.cloud-02{
+    top: 0;
+    left: 450px;
+    -webkit-animation: cloudFloat2 3s linear infinite;
+    -moz-animation: cloudFloat2 3s linear infinite;
+    animation: cloudFloat2 3s linear infinite;
+  }
+  &.cloud-03{
+    top: 0;
+    left: 702px;
+  }
+}
+@-webkit-keyframes cloudFloat1 {
+  from{top: -8px;}
+  50%{top: 4px;}
+  to{top: -8px;}
+}
+@-moz-keyframes cloudFloat1 {
+  from{top: -8px;}
+  50%{top: 4px;}
+  to{top: -8px;}
+}
+@keyframes cloudFloat1 {
+  from{top: -8px;}
+  50%{top: 4px;}
+  to{top: -8px;}
+}
+@-webkit-keyframes cloudFloat2 {
+  from{top: 4px;}
+  50%{top: -8px;}
+  to{top: 4px;}
+}
+@-moz-keyframes cloudFloat2 {
+  from{top: 4px;}
+  50%{top: -8px;}
+  to{top: 4px;}
+}
+@keyframes cloudFloat2 {
+  from{top: 4px;}
+  50%{top: -8px;}
+  to{top: 4px;}
+}
+
+// 乱
+.chaos{
+  position: absolute;
+  &.chaos-01{
+    top: 475px;
+    left: 442px;
+    -webkit-animation: chaosRotate 0.4s linear infinite;
+    -moz-animation: chaosRotate 0.4s linear infinite;
+    animation: chaosRotate 0.4s linear infinite;
+  }
+  &.chaos-02{
+    top: 458px;
+    left: 524px;
+    -webkit-animation: chaosRotate 0.4s linear infinite;
+    -moz-animation: chaosRotate 0.4s linear infinite;
+    animation: chaosRotate 0.4s linear infinite;
+  }
+}
+@-webkit-keyframes chaosRotate {
+  from{-webkit-transform: rotate(0deg);}
+  to{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes chaosRotate {
+  from{-moz-transform: rotate(0deg);}
+  to{-moz-transform: rotate(360deg);}
+}
+@keyframes chaosRotate {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
+
+// 回收页面
+.web-page{
+  position: absolute;
+  opacity: 0;
+  transition: all ease 0.125s;
+  &.web-page-01{
+    top: 8px;
+    right: 431px;
+    -webkit-animation: webMoveIn 1.5s ease forwards;
+    -moz-animation: webMoveIn 1.5s ease forwards;
+    animation: webMoveIn 1.5s ease forwards;
+  }
+  &.web-page-02{
+    top: 287px;
+    right: 431px;
+    -webkit-animation: webMoveIn 1.5s ease 0.4s forwards;
+    -moz-animation: webMoveIn 1.5s ease 0.4s forwards;
+    animation: webMoveIn 1.5s ease 0.4s forwards;
+  }
+  &.web-page-03{
+    bottom: 8px;
+    right: 431px;
+    -webkit-animation: webMoveIn 1.5s ease 0.8s forwards;
+    -moz-animation: webMoveIn 1.5s ease 0.8s forwards;
+    animation: webMoveIn 1.5s ease 0.8s forwards;
+  }
+}
+@-webkit-keyframes webMoveIn {
+  from{right: 381px;}
+  to{right: 431px; opacity: 1;}
+}
+@-moz-keyframes webMoveIn {
+  from{right: 381px;}
+  to{right: 431px; opacity: 1;}
+}
+@keyframes webMoveIn {
+  from{right: 381px;}
+  to{right: 431px; opacity: 1;}
+}
+
+// 灯泡
+.bulb{
+  position: absolute;
+  display: block;
+  height: 162px;
+  width: 135px;
+  top: 282px;
+  left: 1167px;
+  >img{
+    position: absolute;
+    &.dark{
+      opacity: 1;
+      -webkit-animation: darkBulb 1s linear forwards 0.8s;
+      -moz-animation: darkBulb 1s linear forwards 0.8s;
+      animation: darkBulb 1s linear forwards 0.8s;
+    }
+    &.light{
+      opacity: 0;
+      -webkit-animation: lightBulb 1s linear forwards 0.8s;
+      -moz-animation: lightBulb 1s linear forwards 0.8s;
+      animation: lightBulb 1s linear forwards 0.8s;
+    }
+  }
+}
+@-webkit-keyframes lightBulb {
+  from{ opacity: 0; }
+  20%{ opacity: 1; }
+  40%{ opacity: 0; }
+  60%{ opacity: 1; }
+  80%{ opacity: 0; }
+  to{ opacity: 1; }
+}
+@-moz-keyframes lightBulb {
+  from{ opacity: 0; }
+  20%{ opacity: 1; }
+  40%{ opacity: 0; }
+  60%{ opacity: 1; }
+  80%{ opacity: 0; }
+  to{ opacity: 1; }
+}
+@keyframes lightBulb {
+  from{ opacity: 0; }
+  20%{ opacity: 1; }
+  40%{ opacity: 0; }
+  60%{ opacity: 1; }
+  80%{ opacity: 0; }
+  to{ opacity: 1; }
+}
+@-webkit-keyframes darkBulb {
+  from{ opacity: 1; }
+  20%{ opacity: 0; }
+  40%{ opacity: 1; }
+  60%{ opacity: 0; }
+  80%{ opacity: 1; }
+  to{ opacity: 0; }
+}
+@-moz-keyframes darkBulb {
+  from{ opacity: 1; }
+  20%{ opacity: 0; }
+  40%{ opacity: 1; }
+  60%{ opacity: 0; }
+  80%{ opacity: 1; }
+  to{ opacity: 0; }
+}
+@keyframes darkBulb {
+  from{ opacity: 1; }
+  20%{ opacity: 0; }
+  40%{ opacity: 1; }
+  60%{ opacity: 0; }
+  80%{ opacity: 1; }
+  to{ opacity: 0; }
+}
+
+// 电器
+.device{
+  position: absolute;
+  opacity: 0;
+  &.washing{
+    top: 89px;
+    left: 625px;
+    -webkit-animation: moveIn1 .8s ease forwards;
+    -moz-animation: moveIn1 .8s ease forwards;
+    animation: moveIn1 .8s ease forwards;
+  }
+  &.tv{
+    top: 4px;
+    left: 882px;
+    -webkit-animation: moveIn2 .8s ease 0.4s forwards;
+    -moz-animation: moveIn2 .8s ease 0.4s forwards;
+    animation: moveIn2 .8s ease 0.4s forwards;
+  }
+  &.fridge{
+    top: 113px;
+    right: 0;
+    opacity: 0;
+    -webkit-animation: moveIn3 .8s ease 0.8s forwards;
+    -moz-animation: moveIn3 .8s ease 0.8s forwards;
+    animation: moveIn3 .8s ease 0.8s forwards;
+  }
+}
+@keyframes moveIn1 {
+  from{left: 575px;}
+  to{left: 625px; opacity: 1;}
+}
+@keyframes moveIn2 {
+  from{top: -46px;}
+  to{top: 4px; opacity: 1;}
+}
+@keyframes moveIn3 {
+  from{right: -50px;}
+  to{right: 0; opacity: 1;}
+}

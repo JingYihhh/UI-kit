@@ -1,0 +1,199 @@
+@charset "UTF-8";
+//  Created by Dicky on 2016/10/10.
+@import "global.scss";
+@import "components/recycle/_recycle-comment";
+@import "components/recycle/_m-recycle-label";
+
+body {
+  overflow-y: scroll;
+}
+
+.banner-cont {
+  //width: 1920px;
+  height: 436px;
+  min-width: 1200px;
+  max-width: 1920px;
+  position: relative;
+  .swiper-container {
+    width: 1920px;
+    height: 436px;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+  }
+}
+
+section {
+  padding: 24px 0px;
+  &.section-bg-dark {
+    background-color: $clrHtmlBg;
+  }
+
+  &.section-bg-Light {
+    background-color: $clrWhiteBg;
+  }
+}
+
+//搜索框
+.ipt-search{
+  width: calc(25% - #{$contentPd});
+  margin-right: $contentPd;
+  .ipt-text{
+    width: 260px - $contentPd;
+  }
+}
+
+.step-cont {
+
+}
+
+/*分类按钮*/
+.type-cont {
+  background-color: $clrWhiteBg;
+}
+
+.step-cont {
+  padding: 24px 0px;
+  margin: 0px 24px;
+  border-bottom: solid 2px $clrBorder;
+  ul {
+    li {
+      margin-right: 96px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      .num-order {
+        border: 1px solid $clrMain;
+        height: 24px;
+        width: 24px;
+        color: $clrMain;
+        text-align: center;
+        line-height: 24px;
+        border-radius: 50%;
+      }
+      .step-txt {
+        height: 24px;
+        line-height: 24px;
+        font-size: 16px;
+        color: $clrHtmlFont;
+        margin-left: 10px;
+        font-weight: bold;
+      }
+      img {
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+.type-btn-cont {
+  padding: 24px 40px;
+  a.btn-type {
+    margin: 13px;
+    height: 114px;
+    width: 114px;
+    text-align: center;
+    padding: 26px 16px;
+    box-sizing: border-box;
+    border: $clrBorder 1px solid;
+    span.icon {
+      height: 48px;
+      width: 56px;
+      display: block;
+      background: url("../../img/recycle/icon-sprit.png");
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    @for $i from 0 to 20 {
+      &.icon-#{$i+1} .icon {
+        background-position: #{$i*(-56)}px 0px;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+      color: $clrMain;
+      span.icon {
+        background-position-y: -48px;
+      }
+      span {
+        color: $clrMain;
+      }
+    }
+    &.one-click-recycle, &.one-click-recycle:hover {
+      span {
+        color: #66b856;
+      }
+    }
+    &.one-click-donate, &.one-click-donate:hover {
+      span {
+        color: #ff6e63;
+      }
+    }
+  }
+}
+
+.recycle-item-cont {
+  .price {
+    color: $clrTextRed;
+  }
+  .item-margin-horizontal {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+.partner-list-content-cont {
+  height: 192px;
+  background: $clrWhiteBg;
+  margin: 0 $minSpacing;
+}
+
+.partner-join-cont {
+  background: url("../../img/recycle/partner-join-bg.jpg") no-repeat;
+  height: 100%;
+  width: 312px;
+  text-align: center;
+  padding: 1px;
+  margin-right: $minSpacing;
+  p {
+    color: #ffffff;
+    margin-top: 48px;
+  }
+  .oola-btn {
+    margin-top: 24px;
+  }
+}
+
+.partner-list {
+  width: 852px;
+  padding-top: $minSpacing*2;
+  .partner-cont {
+    text-align: center;
+    width: 144px;
+    height: 60px;
+    overflow: hidden;
+    margin: 0 $minSpacing $minSpacing*2;
+  }
+  .partner-img {
+    max-width: 100%;
+  }
+  .partner-cont:nth-child(5n) {
+    border: none;
+  }
+}
+
+.comment-list-all{
+  .comment-cont{
+    margin: $minSpacing*2 $minSpacing 0;
+  }
+}
+
+.more-comment{
+  font-size: 12px;
+  color: $clrHtmlFont!important;
+  font-weight: normal;
+  margin-top: 4px;
+  text-decoration: none;
+}

@@ -1,0 +1,66 @@
+//  Created by Dicky on 2016/11/3.
+
+doctype html
+html
+	head
+		block meta
+			meta(charset="UTF-8")
+			meta(http-equiv="X-UA-Compatible" content="IE=edge, chrome=1")
+			meta(name="renderer" content="webkit")
+			meta(name="viewport" content="width=1200, user-scalable=no")
+		block pluginCss
+			link(rel="stylesheet" href="./dist/css/plugins/bootstrap-3.3.6.css")
+		block oolaCss
+			link(rel="stylesheet" href="./dist/css/core/base.css")
+			link(rel="stylesheet" href="./dist/css/common.css")
+			link(rel="stylesheet" href="./dist/css/welcome.css")
+	body
+		.welcome-container.mar-cent
+			//.welcome-wrapper
+			.page#cover-page.clearfix
+				.block-link.link-phone.fl
+					a(href="javascript:void(0);")
+						img(src="img/welcome/txt-phone.png")
+				.block-link.link-other.fr
+					a(href="javascript:void(0);")
+						img(src="img/welcome/txt-other.png")
+				.block-link.link-clothes.fl
+					a(href="javascript:void(0);")
+						img(src="img/welcome/txt-clothes.png")
+				a.btn-skip(href="./index.html")
+					img(src="img/welcome/btn-skip.png")
+			.page#recycle-phone
+				.img-cont
+					img.cloud.cloud-01(src="img/welcome/cloud-1.png")
+					img.cloud.cloud-02(src="img/welcome/cloud-2.png")
+					img.cloud.cloud-03(src="img/welcome/cloud-3.png")
+					img.chaos.chaos-01(src="img/welcome/chaos-1.png")
+					img.chaos.chaos-02(src="img/welcome/chaos-2.png")
+					img.web-page.web-page-01(src="img/welcome/phone-web-1.png")
+					img.web-page.web-page-02(src="img/welcome/phone-web-2.png")
+					img.web-page.web-page-03(src="img/welcome/phone-web-3.png")
+					img(src="img/welcome/recycle-phone.jpg")
+				a.btn-return(href="#")
+					img(src="img/welcome/btn-return.png")
+			.page#recycle-clothes
+				.img-cont
+					span.bulb
+						img.dark(src="img/welcome/bulb-dark.png")
+						img.light(src="img/welcome/bulb-light.png")
+					img.web-page.web-page-01(src="img/welcome/clothes-web-1.png")
+					img.web-page.web-page-02(src="img/welcome/clothes-web-2.png")
+					img.web-page.web-page-03(src="img/welcome/clothes-web-3.png")
+					img(src="img/welcome/recycle-clothes.jpg")
+				a.btn-return(href="#")
+					img(src="img/welcome/btn-return.png")
+			.page#recycle-other
+				.img-cont
+					img.device.washing(src="img/welcome/washing.png")
+					img.device.tv(src="img/welcome/tv.png")
+					img.device.fridge(src="img/welcome/fridge.png")
+					img(src="img/welcome/recycle-other.jpg")
+				a.btn-return(href="#")
+					img(src="img/welcome/btn-return.png")
+
+		script(src="js/plugins/jquery/jquery-1.11.3.js")
+		script(src="js/welcome.js")

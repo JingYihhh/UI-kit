@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@import "global.scss";
+
+section .content-area{
+  padding: 0 $contentPd;
+}
+//- 个人中心头部样式
+.banner-cont{
+  height: 228px;
+  background: url("../../img/my-center/my-center-banner.jpg") no-repeat center center;
+}
+.user-msg{
+  padding: 35px 40px;
+  max-height: 228px;
+  .user-avatar-cont{
+    width: 120px;
+    height: 120px;
+    border: 1px solid $clrWhiteBg;
+    border-radius: 50%;
+    margin-right: $minSpacing*2;
+    overflow: hidden;
+    img{
+      max-width: 100%;
+    }
+  }
+  .user-name-cont{
+    margin-top: $minSpacing*2;
+    .user-name{
+      @extend %fontH1;
+      color: $clrWhiteBg;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+  .user-sex{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    vertical-align: middle;
+    margin-left: $minSpacing/2;
+    &.icon-female{
+      background: url("../../img/my-center/icon-female.png") no-repeat;
+    }
+    &.icon-male{
+      background: url("../../img/my-center/icon-male.png") no-repeat;
+    }
+  }
+  .progress{
+    display: inline-block;
+    vertical-align: middle;
+    width: 156px;
+    margin-right: $minSpacing/2;
+  }
+  .vip-grade{
+    position: relative;
+    top: 4px;
+    text-transform: uppercase;
+    font-size: 8px;
+    color: $clrWhiteBg;
+    background-color: $clrHtmlRed;
+    padding: 0 2px;
+    border-radius: 2px;
+    &:before, &:after{
+      content: '';
+      display: inline-block;
+      position: absolute;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background: $clrHtmlBg;
+      top: -6px;
+    }
+    &:before{
+      left: 4px;
+    }
+    &:after{
+      right: 4px;
+    }
+  }
+  .privacy-set{
+    clear: both;
+    display: block;
+    font-size: 12px;
+    margin-top: $minSpacing;
+    margin-left: 20px;
+  }
+}
+
+//- 个人中心侧边栏样式
+.category-cont .side-title:hover{
+  color: $clrMain;
+}
+.category-cont dl dd a{
+  float: none;
+  display: block;
+  padding: $minSpacing 30px;
+  margin: 0;
+  & + a{
+    border-top: 1px solid $clrBorder;
+  }
+}
+.slide-bottom dl dd{
+  padding: 0;
+}
+
+//- 个人中心右侧主内容
+.my-center-cont{
+  width: 936px;
+}
+
+//表格
+.table.oola-table{
+  margin: 0;
+  thead{
+    th{
+      &.date-cell{
+        width: 115px;
+      }
+      &.status-cell, &.product-name{
+        width: 120px;
+      }
+      &.gift-name{
+        width: 280px;
+      }
+      &.pts-detail{
+        width: 40%;
+      }
+    }
+  }
+  tbody{
+    td{
+      padding: 26px $minSpacing*2;
+      &:last-child{
+        min-width: 170px;
+      }
+      &.product-name{
+        width: 120px;
+        word-break: break-all;
+      }
+      &.gift-name{
+        width: 280px;
+        word-break: break-all;
+      }
+    }
+  }
+  td *{
+    @extend %fontSmall;
+  }
+  td{
+    .btn-operate, .btn-operate-blue{
+      color: $clrHtmlBlue;
+      line-height: $minSpacing*2;
+    }
+    .btn-operate-red{
+      color: $clrHtmlRed;
+    }
+    .btn-operate:nth-child(2n), .btn-operate-blue + .btn-operate-red{
+      margin-left: $minSpacing*2;
+    }
+  }
+}
+
+//隐私设置弹窗
+.privacy-set-form{
+  margin-top: $minSpacing*3;
+  .form-group:nth-child(1){
+    >.control-label{
+      padding-top: 7px;
+    }
+    >.form-control{
+      margin: 0 $minSpacing*2;
+    }
+    >span{
+      font-size: 12px;
+      color: $clrCancel;
+      padding-top: 8px;
+    }
+  }
+  .form-group:last-child{
+    margin-top: $minSpacing*2;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,319 @@
+@charset "UTF-8";
+@import "global.scss";
+
+//积分不足提示弹窗
+.modal-header{
+  border-color: transparent!important;
+}
+.modal-body{
+  h3{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: $minSpacing;
+  }
+  p{
+    text-indent: 2em;
+  }
+  .oola-btn-group{
+    margin-top: $minSpacing*2;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.breadcrumb-cont{
+  background-color: $clrHtmlBg;
+}
+.content-main .content-area{
+  padding: 0 $contentPd;
+}
+
+// 左侧边栏
+.side-title {
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+  margin: 0 24px;
+  border-bottom: 1px solid $clrBorder;
+}
+
+// 推荐商品
+.recommend-bar{
+  width: $sideBarW;
+  border: 1px solid $clrBorder;
+  margin-top: $minSpacing*2;
+}
+.recommend-product-cont{
+  padding: 0 $minSpacing*2;
+}
+.recommend-product{
+  margin: $minSpacing*2 0;
+  width: $sideBarW - $minSpacing*4;
+  display: block;
+  float: none;
+  .img-cont{
+    width: $sideBarW - $minSpacing*4 - 2;
+    height: $sideBarW - $minSpacing*4 - 2;
+    overflow: hidden;
+    img{
+      max-width: 100%;
+    }
+  }
+  .figure-title{
+    @extend %fontSmall;
+  }
+}
+
+//商品详情
+.product-cont{
+  width: 936px;
+}
+
+//图片轮播区
+.product-swiper{
+  width: 360px;
+  height: 360px;
+  .swiper-slide{
+    img{
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .swiper-pagination{
+    bottom: 12px;
+    opacity: 0.6;
+    transition: all ease 0.5s;
+    span.swiper-pagination-bullet{
+      width: $minSpacing;
+      height: $minSpacing;
+      margin: 0 8px;
+      background-color: $clrHtmlFont;
+      //opacity: .6;
+      border: 1px solid #ffffff;
+      transition: all ease 0.125s;
+    }
+    span.swiper-pagination-bullet-active{
+      background-color: $clrMain;
+      opacity: 1;
+      border: 1px solid $clrWhiteBg;
+    }
+  }
+}
+//.product-swiper:hover{
+//  .swiper-pagination{
+//    opacity: 1;
+//    span.swiper-pagination-bullet{
+//      margin: 0 8px;
+//    }
+//  }
+//}
+
+//兑换详情区
+.convert-detail{
+  width: 552px;
+  >h1{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .product-desc{
+    @extend %fontSmall;
+    color: $clrCancel;
+    line-height: 24px;
+    margin-top: $minSpacing;
+    height: $minSpacing*4;
+    overflow: hidden;
+  }
+  .form-group{
+    margin-bottom: $minSpacing;
+    .control-label{
+      text-align: left;
+    }
+  }
+  .price-label{
+    padding-top: 13px;
+  }
+  .num{
+    @extend %fontH1;
+    color: $clrHtmlRed;
+    font-weight: bold;
+  }
+  .submit-bar{
+    margin-top: 59px;
+    margin-bottom: 0;
+    button{
+      margin-right: $minSpacing*2;
+    }
+    .tips{
+      line-height: $minSpacing*3;
+      font-size: 12px;
+      color: $clrCancel;
+    }
+  }
+}
+
+//兑换方式
+ul.dowebok{
+  padding: 2px 0;
+  li{
+    display: inline-block;
+    float: left;
+    margin-right: $minSpacing*2;
+    input.labelauty + label
+    {
+      display: block;
+      margin-bottom: 0px;
+      background-color: #ffffff;
+      cursor: pointer;
+      height: 30px;
+      width: 72px;
+      padding: 0;
+      text-align: center;
+      border: 1px solid $clrFormBorder;
+
+      border-radius: 0;
+      -moz-border-radius: 0;
+      -webkit-border-radius: 0;
+
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image + span.labelauty-unchecked,
+    input.labelauty + label > span.labelauty-checked-image + span.labelauty-checked{
+      @extend %fontSmall;
+      margin: 0;
+      line-height: 28px;
+    }
+
+    input.labelauty + label > span.labelauty-unchecked-image,
+    input.labelauty + label > span.labelauty-checked-image
+    {
+      display: none;
+    }
+
+    input.labelauty:not(:checked):not([disabled]) + label:hover{
+      background-color: $clrWhiteBg;
+    }
+    input.labelauty:not(:checked):not([disabled]) + label:hover span.labelauty-unchecked{
+      color: $clrHtmlRed;
+    }
+    input.labelauty:checked + label
+    {
+      border-color: $clrHtmlRed;
+    }
+    input.labelauty:checked + label > span.labelauty-checked{
+      color: $clrHtmlRed!important;
+    }
+
+    input.labelauty:checked:not([disabled]) + label:hover
+    {
+      background-color: #ffffff;
+      color: $clrHtmlRed;
+    }
+  }
+}
+
+//兑换数量
+.amount-ipt{
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+  text-align: center;
+  padding: 4px 6px;
+  margin: 2px 0;
+  border-radius: 0;
+}
+//增加减少按钮
+.add-btn-group{
+  display: inline-block;
+  margin: 0 $minSpacing 0 2px;
+  vertical-align: middle;
+  a{
+    border: 1px solid $clrFormBorder;
+    display: block;
+    width: 14px;
+    height: 14px;
+    position: relative;
+    &:before{
+      display: block;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-top: 1px solid #686868;
+      border-left: 1px solid #686868;
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      margin-left: -3px;
+    }
+  }
+  .add{
+    margin-bottom: 2px;
+    &:before{
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  .reduce{
+    &:before{
+      top: 2px;
+      -webkit-transform: rotate(-135deg);
+      -moz-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+      -o-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+//产品简介
+.product-detail{
+  margin-top: $minSpacing*2;
+  padding: 0 $minSpacing*2 $minSpacing*2;
+  border: 1px solid $clrBorder;
+  .product-detail-cont{
+    padding-top: $minSpacing*2;
+    min-height: 400px;
+    font-size: 12px;
+    color: $clrNavFont;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.product-detail-nav{
+  height: 42px;
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+  li{
+    display: inline-block;
+    padding: 0 $minSpacing;
+    text-align: center;
+    & + li{
+      border-left: 1px solid $clrBorder;
+    }
+    a{
+      @extend %fontNormal;
+      font-weight: bold;
+    }
+    &.active a{
+      color: $clrMain;
+    }
+  }
+}
+
+//解释声明
+.pts-mall-statement{
+  margin-top: $minSpacing*2;
+  border: 1px solid $clrBorder;
+  padding: $minSpacing*2 $minSpacing*2 $minSpacing!important;
+  dl{
+    margin-bottom: $minSpacing;
+    dt, dd{
+      @extend %fontSmall;
+      font-weight: normal;
+      line-height: 20px;
+    }
+  }
+}

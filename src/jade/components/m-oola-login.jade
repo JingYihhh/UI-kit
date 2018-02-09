@@ -1,0 +1,39 @@
+//-
+    Created by Jingyi on 2016-11-17.
+
+//-extends ../layout
+include oola-modal
+include m-oola-form
+
++oolaModal("sm", false, "", false, "oola-login-cont")
+    h2 欢迎来到噢啦网
+    form.login-form.clearfix
+        .form-group.has-error
+            .input-group
+                span.input-group-addon
+                    span.user-ipt-icon
+                input.form-control.user-ipt(type="text" placeholder="请输入手机号码")
+            .help-block 用户名不能为空！
+        .form-group.has-focus
+            .input-group
+                span.input-group-addon
+                    span.password-ipt-icon
+                input.form-control.password-ipt(type="password" placeholder="请输入密码")
+            .help-block 密码不能为空！
+        .form-group
+            input.form-control.check-code-ipt(type="text" placeholder="请输入验证码")
+            img(src="img/common/check-code.jpg")
+            .help-block 验证码不能为空！
+        .form-group
+            +createCheckbox("remember", "下次自动登录", true)
+            span.fr
+                a.btn-link(href="#") 注册
+                a.btn-link(href="#") 忘记密码
+        .form-group
+            button.oola-btn.btn-main.btn-l.btn-login-l(type="submit") 立即登录
+    .sign-in-with
+        h3 第三方登录
+        ul
+            li: a(href="javascript:void(0);" title="新浪微博登录")
+            li: a(href="javascript:void(0);" title="QQ登录")
+            li: a(href="javascript:void(0);" title="微信登录")

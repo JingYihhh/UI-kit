@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+//帮助支持卡片
+
+.support-tag{
+  margin-bottom: $minSpacing*2;
+  border: 1px solid $clrBorder;
+  padding: 0 $minSpacing*2;
+  width: 324px;
+  background-color: $clrWhiteBg;
+
+  .tag-title{
+    border-bottom: 1px solid $clrBorder;
+    padding: $minSpacing 0;
+    @extend %fontNormal;
+    line-height: 1;
+
+    >a{
+      @extend %fontSmall;
+    }
+  }
+
+  .support-content{
+    padding: $minSpacing 0;
+  }
+}
+.qna-support{
+  list-style: decimal;
+  margin-left: 20px;
+
+  a{
+    @extend %fontNormal;
+  }
+}
+
+// 右栏更多信息
+.more-info-cont {
+  width: 324px;
+}
+.info-moudel {
+  background: #ffffff;
+  padding: 0 $minSpacing*2 $minSpacing*2;
+  margin-bottom: $minSpacing*2;
+  a {
+    color: $clrHtmlFont;
+  }
+  .info-title {
+    position: relative;
+    border-bottom: 1px solid $clrBorder;
+    padding: $minSpacing 0;
+    h3 {
+      @extend %fontNormal;
+    }
+    a.btn-more {
+      font-size: 12px;
+      margin-top: 2px;
+    }
+  }
+}
+.notice-list-cont {
+  ul {
+    li {
+      position: relative;
+      @extend %fontNormal;
+      padding: $minSpacing 0 0 $minSpacing;
+      span {
+        display: block;
+        font-size: 12px;
+        color: $clrNavFont;
+        font-weight: normal;
+        line-height: 18px;
+      }
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $clrMain;
+        left: 0;
+        top: 20px;
+      }
+    }
+  }
+}

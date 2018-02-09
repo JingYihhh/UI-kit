@@ -1,0 +1,124 @@
+@charset "UTF-8";
+@import "global.scss";
+
+.breadcrumb-cont{
+  background-color: $clrHtmlBg;
+}
+
+.content-main{
+  padding-top: $minSpacing*2;
+  .content-area{
+    padding: 0 $contentPd;
+  }
+}
+
+// 左侧边栏
+.side-title {
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+  margin: 0 24px;
+  border-bottom: 1px solid $clrBorder;
+}
+
+// 推荐商品
+.recommend-bar{
+  width: $sideBarW;
+  border: 1px solid $clrBorder;
+  margin-top: $minSpacing*2;
+}
+.recommend-product-cont{
+  padding: 0 $minSpacing*2;
+}
+.recommend-product{
+  margin: $minSpacing*2 0;
+  width: $sideBarW - $minSpacing*4;
+  display: block;
+  float: none;
+  .img-cont{
+    width: $sideBarW - $minSpacing*4 - 2;
+    height: $sideBarW - $minSpacing*4 - 2;
+    overflow: hidden;
+    img{
+      max-width: 100%;
+    }
+  }
+  .figure-title{
+    @extend %fontSmall;
+  }
+}
+
+// 主内容列表
+//筛选表单
+.main-list{
+  width: 936px;
+  .form-group{
+    margin: $minSpacing*2 0 0;
+  }
+  .control-label{
+    padding: 0;
+    color: $clrCancel;
+  }
+  .radio-cont{
+    padding-left: 80px;
+  }
+  .radio-inline{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    input[type="radio"]{
+      margin: 0;
+    }
+    span{
+      font-size: 12px;
+    }
+    input[type="radio"]:checked + span{
+      background-color: transparent;
+      color: $clrMain;
+    }
+  }
+}
+.filter-bar{
+  padding: $minSpacing $minSpacing*2;
+  border: 1px solid $clrBorder;
+  h3{
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+// 排序栏
+.sort-bar{
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+  .form-group{
+    margin: 0;
+  }
+  .control-label{
+    padding-top: 8px;
+  }
+  .radio-cont{
+    padding-top: 7px;
+    padding-left: $minSpacing*2;
+  }
+  .radio-inline{
+    float: left;
+    span{
+      display: block;
+      border: 1px solid $clrFormBorder;
+      padding: 5px 17px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    input[type="radio"]:checked + span{
+      border-color: $clrMain;
+    }
+  }
+}
+
+// 商品列表
+.products-list{
+  margin-left: -24px;
+  .product-item{
+    margin-left: 24px;
+  }
+}

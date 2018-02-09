@@ -1,0 +1,190 @@
+@charset "UTF-8";
+//  Created by Dicky on 2016/9/28.
+.common-nav {
+  //position: fixed;
+  //top: 0;
+  //z-index: 999;
+  width: 100%;
+  background-color: $clrWhiteBg;
+  box-shadow: 1px 0 5px rgba(0,0,0,.23);
+  height: 72px;
+  .content-area{
+    padding: 0 $contentPd;
+  }
+  a.logo-sxb {
+    padding: $minSpacing+5 0;
+  }
+  .location {
+    margin-left: 28px;
+    line-height: 88px;
+    a {
+      color: $clrMain;
+    }
+  }
+  ul.menu-cont {
+    $iconH: 18;
+    $iconW: 18;
+    padding: 27px 0 22px;
+    margin-left: $minSpacing*4;
+    li {
+      margin-right: 14px;
+      a {
+        display: block;
+        @extend %fontH3;
+        color: $clrNavFont;
+        i {
+          height: #{$iconH}px;
+          width: #{$iconW}px;
+          background: url("../../img/common/common-nav-icons.png") no-repeat;
+          overflow: hidden;
+          display: block;
+          margin-right: 5px;
+          background-position-y: -18px;
+        }
+        &:hover, &.on {
+          color: $clrMain;
+        }
+      }
+    }
+    @for $i from 0 to 20 {
+      li{
+        i.icon-#{$i+1}  {
+          //background-size: 23px;
+          background-position-x: -#{$i*$iconW}px;
+        }
+      }
+    }
+  }
+  .global-user-cont {
+    max-width: 200px;
+    transition-duration: .125s;
+    cursor: pointer;
+    position: relative;
+    z-index: 5010;
+    padding: 13px 0;
+    &:hover {
+      .user-avatar-cont {
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.23);
+      }
+      .user-name-cont {
+        color: #ffba17;
+      }
+      i.symbol {
+        transform: rotate(-180deg);
+        -ms-background-position-y: 0px;
+        background-position-y: 0px;
+      }
+      .operation-list-cont {
+        display: block;
+      }
+    }
+    .user-cont-L{
+      position: relative;
+    }
+    .user-avatar-cont {
+      width: 38px;
+      height: 38px;
+      border: 3px solid #ffffff;
+      background: #ffffff;
+      box-sizing: border-box;
+      border-radius: 50%;
+      overflow: hidden;
+      transition-duration: .125s;
+      img {
+        width: 100%;
+      }
+    }
+    .user-name-cont {
+      max-width: 120px;
+      font-size: 14px;
+      text-overflow: ellipsis;
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0px 10px;
+      height: 44px;
+      line-height: 44px;
+      transition-duration: .125s;
+      min-width: 68px;
+    }
+    i.symbol {
+      width: 12px;
+      height: 6px;
+      background: url("../../img/recycle/list_symbol_sprit.png");
+      -ms-background-position-y: -6px;
+      background-position-y: -6px;
+      transition-duration: .125s;
+      margin-top: 19px;
+    }
+    .operation-list-cont {
+      position: absolute;
+      top: 31px;
+      left: 20%;
+      border-radius: 3px;
+      display: none;
+      &:before {
+        content: url("../../img/global_user_list_triangle.png");
+        display: block;
+        height: 26px;
+      }
+      ul {
+        width: 120px;
+        background: #ffffff;
+        border-radius: 3px;
+        li {
+          position: relative;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          border-bottom: solid 1px #d9dde2;
+          a {
+            font-size: 14px;
+            color: #55575b;
+            &:hover {
+              color: $clrMain;
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn-cont {
+    padding: 17px 0;
+    .btn-register {
+      border-color: $clrMain;
+      background: $clrMain;
+      color: $clrWhiteBg;
+      margin-right: 10px;
+    }
+    .btn-login {
+      border-color: $clrMain;
+      color: $clrMain;
+    }
+  }
+}
+
+/* 未读信息红点提示 */
+.msg-unread, .msg-unread-num{
+  position: absolute;
+  z-index: 99;
+  background-color: $clrHtmlRed;
+  border-radius: 50%;
+}
+.msg-unread{
+  top: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+}
+.msg-unread-num {
+  top: 50%;
+  margin-top: -8px;
+  width: $minSpacing+4;
+  height: $minSpacing+4;
+  font-size: 12px;
+  color: $clrWhiteBg;
+  text-align: center;
+  padding: 2px;
+  line-height: 1;
+  margin-left: 4px;
+}

@@ -1,0 +1,96 @@
+//-
+   Created by Jingyi on 2016-10-13.
+
+
+//- 创建一个水平表单的控件组 带有标签名、是否偏移、是否报错
+mixin createFormGroup(labelName, offset, isError, errorTxt, labelClass)
+    .form-group
+        //- 控件组带有label标签时不偏移，不带label标签时偏移
+        if(!offset)
+            label.col-sm-2.control-label(class=labelClass) #{labelName}
+            //- 校验状态报错时，添加类名has-error，添加错误提示文本
+            if(isError)
+                .col-sm-10.has-error
+                    if block
+                        block
+                        .help-block #{errorTxt}
+            else
+                .col-sm-10
+                    if block
+                        block
+                        .help-block
+        else
+            if(isError)
+                .col-sm-offset-2.col-sm-10.has-error
+                    if block
+                        block
+                        .help-block #{errorTxt}
+            else
+                .col-sm-offset-2.col-sm-10
+                    if block
+                        block
+                        .help-block
+
+//- 创建一个垂直表单的控件组 带有标签名、是否报错、错误信息、标签类名
+mixin createVerFormGroup(labelName, isError, errorTxt, labelClass)
+    //- 校验状态报错时，添加类名has-error，添加错误提示文本
+    if(isError)
+        .form-group.has-error
+            label.control-label(class=labelClass) #{labelName}
+            //内联的警告提示(class="help-block inline-help")
+            .help-block.inline-help
+                img(src="img/msg-icon/icon-msg-warning-16.png")
+                | #{errorTxt}
+            if block
+                block
+    else
+        .form-group
+            label.control-label(class=labelClass) #{labelName}
+            .help-block.inline-help
+                img(src="img/msg-icon/icon-msg-warning-16.png")
+                | #{errorTxt}
+            if block
+                block
+
+//- 创建一个下拉框控件 带标签名、下拉选项数组
+mixin createSltControl(optionArr, clazzName)
+    select.form-control(class=clazzName)
+        each option in optionArr
+            option #{option}
+
+//- 创建一个单选框
+mixin createRadio(radioName, radioId, txt, isInline)
+    if(isInline)
+        label.radio-inline
+            input(type="radio" name=radioName id=radioId)
+            label(for=radioId)
+            if block
+                block
+            else
+                | #{txt}
+    else
+        .radio
+            label
+                input(type="radio" name=radioName id=radioId)
+                label(for=radioId)
+                | #{txt}
+
+//- 创建一个复选框
+mixin createCheckbox(checkboxId, txt, isInline)
+    if(isInline)
+        label.checkbox-inline
+            input(type="checkbox" id=checkboxId)
+            label(for=checkboxId)
+            if block
+                block
+            else
+                | #{txt}
+    else
+        .checkbox
+            label
+                input(type="checkbox" id=checkboxId)
+                label(for=checkboxId)
+                if block
+                    block
+                else
+                    | #{txt}

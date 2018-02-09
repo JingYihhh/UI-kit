@@ -1,0 +1,293 @@
+@charset "UTF-8";
+@import "global";
+
+body{
+  background-color: $clrHtmlBg!important;
+}
+.content-main{
+  padding-top: 0;
+}
+.order-content{
+  padding: $minSpacing*2;
+  background-color: $clrWhiteBg;
+  min-height: calc(100vh - 215px);
+}
+.section-title{
+  @extend %fontNormal;
+  font-weight: bold;
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+}
+.order-section{
+  padding: $minSpacing*2 $minSpacing*2 0;
+}
+
+//订单信息
+//回收商信息
+.recyclers-info{
+  width: 380px;
+  border-right: 1px solid $clrBorder;
+  .rcl-contact{
+    clear: both;
+  }
+}
+.rcl-logo{
+  overflow: hidden;
+  width: 96px;
+  height: 96px;
+  border: 1px solid $clrBorder;
+  margin-bottom: $minSpacing;
+  img{
+    max-width: 100%;
+  }
+}
+.rcl-contact, .rcl-detail{
+  >p{
+    @extend %fontSmall;
+    color: $clrCancel;
+    font-weight: normal;
+    margin-top: $minSpacing/2;
+  }
+  >p span{
+    @extend %fontSmall;
+    font-weight: normal;
+    margin-left: $minSpacing/2;
+  }
+}
+.rcl-detail{
+  margin-left: $minSpacing*2;
+  width: 236px;
+  p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  >h2{
+    @extend %fontNormal;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+}
+.rcl-contact >p span{
+  display: inline-block;
+  float: right;
+  width: calc(100% - 78px);
+  margin-right: $minSpacing*2;
+}
+//订单状态
+.order-status-update{
+  margin-left: $minSpacing*2;
+  width: calc(100% - 404px);
+}
+
+// 商品详情
+.table.oola-table-order{
+  border: 0;
+  margin: 0;
+  thead{
+    background: $clrTableYellow;
+    th{
+      @extend %fontNormal;
+      color: $clrHtmlFont!important;
+      border-bottom: 0!important;
+      padding: 8px;
+      text-align: center;
+    }
+  }
+  tr>td{
+    @extend %fontNormal;
+    &:first-child{
+      text-align: left;
+    }
+    padding: $minSpacing*2;
+    text-align: center;
+    .product-img{
+      display: inline-block;
+      width: 61px;
+      height: 61px;
+      margin-right: 18px;
+      vertical-align: middle;
+    }
+    .product-name{
+      vertical-align: middle;
+      display: inline-block;
+    }
+    >span.num{
+      color: $clrMain;
+    }
+  }
+  .counter-td{
+    text-align: right!important;
+    height: 36px;
+    line-height: 36px;
+    background-color: $clrTableYellow;
+    padding: 0 $minSpacing*2;
+  }
+}
+ul.desc li{
+  display: inline-block;
+  float: left;
+  &:before{
+    content: '|';
+    display: inline-block;
+    margin: 0 4px;
+  }
+  &:first-child:before{
+    display: none;
+  }
+}
+
+//流程图样式
+ul.flow{
+  li{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color: $clrNavFont;
+    span{
+      display: none;
+      font-weight: normal;
+    }
+    &:before{
+      position: relative;
+      display: block;
+      content: (attr(data-status));
+      z-index: 1;
+      height: 30px;
+      width: 30px;
+      border: 1px solid $clrBorder;
+      line-height: 28px;
+      border-radius: 50%;
+      background: $clrBorder;
+      margin: 0 auto $minSpacing;
+      color: $clrWhiteBg;
+      font-size: 16px;
+    }
+    &+li:after{
+      position: absolute;
+      display: block;
+      content: '';
+      left: -50%;
+      top: 15px;
+      z-index: 0;
+      width: 100%;
+      height: 4px;
+      background: $clrBorder;
+      border: 1px solid $clrBorder;
+    }
+    &.has-complete{
+      span.complete-data{
+        display: block;
+        color: $clrNavFont;
+      }
+      &:before{
+        content: url("../../img/common/icon-complete.png");
+      }
+      &:after{
+        background: $clrMain;
+      }
+    }
+    &.on:before, &.on:after{
+      background: $clrMain;
+    }
+  }
+}
+//普通回收订单流程图
+.nor-order-flow{
+  ul.flow{
+    li{
+      width: 20%;
+    }
+  }
+}
+//一键回收订单流程图
+.shortcut-re-order-flow{
+  ul.flow{
+    li{
+      width: 25%;
+    }
+  }
+}
+//一键捐助订单流程图
+.shortcut-do-order-flow{
+  ul.flow{
+    li{
+      width: 33.333%;
+    }
+  }
+}
+
+//商家接单
+.order-status{
+  font-weight: bold;
+}
+.status-desc, .status-desc *{
+  font-size: 12px;
+  margin-top: $minSpacing;
+}
+
+//进入配送
+.form-ship{
+  margin-top: $minSpacing*2;
+  .form-group{
+    margin: 0;
+    .form-control{
+      margin: 0 $minSpacing*2;
+    }
+  }
+}
+
+//物流信息
+.logistics-cont{
+  *{
+    @extend %fontSmall;
+    color: $clrCancel
+  }
+  >p{
+    margin: $minSpacing/2 0;
+  }
+}
+ul.logistics{
+  height: 90px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  li{
+    position: relative;
+    padding-left: 20px;
+    line-height: 22px;
+    margin-left: 6px;
+    border-left: 2px solid $clrBorder;
+    &:before{
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 12px;
+      height: 12px;
+      left: -7px;
+      top: 5px;
+      border: 2px solid $clrWhiteBg;
+      border-radius: 50%;
+      background: $clrBorder;
+    }
+  }
+  li:first-child{
+    color: $clrHtmlFont;
+    font-weight: bold;
+    &:before{
+      background: $clrTableYellow;
+    }
+  }
+  li:last-child{
+    border-color: transparent;
+    &:after{
+      position: absolute;
+      display: block;
+      content: '';
+      width: 2px;
+      height: 5px;
+      left: -2px;
+      top: 0;
+      background: $clrBorder;
+    }
+  }
+}

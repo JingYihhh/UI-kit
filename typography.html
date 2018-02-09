@@ -1,0 +1,865 @@
+
+<!--
+Created by Jingyi on 2016-8-15.
+
+--><!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=1200, user-scalable=no">
+    <link rel="stylesheet" href="./dist/css/plugins/bootstrap-3.3.6.css">
+    <link rel="stylesheet" href="./dist/css/core/base.css">
+    <link rel="stylesheet" href="./dist/css/common.css">
+    <link rel="stylesheet" href="dist/css/u-typography.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
+    <title>噢啦网-公共样式库</title>
+  </head>
+  <body><!--[if lt IE 9]><div class="alert alert-danger topframe" role="alert">你的浏览器实在<strong>太太太太太太旧了</strong>，放学别走，升级完浏览器再说 <a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div><![endif]-->
+    <div class="common-nav">
+      <div class="content-area mar-cent clearfix">
+        <div class="logo fl"><img src="img/common/common-logo-black.png">
+          <h1>-公共样式库</h1>
+        </div>
+      </div>
+    </div>
+    <!--include components/oola-sidebar-->
+    <div class="content-area mar-cent typography-cont">
+      <section id="breadcrumbs">
+        <h2 class="typography-sub-heading">Breadcrumbs 面包屑</h2>
+        <div class="oola-breadcrumbs">
+          <ul class="breadcrumb clearfix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">二级页</a></li>
+            <li class="current-pos">当前页</li>
+          </ul>
+        </div>
+        <div class="source-code-cont">
+          <h3>HTML</h3>
+          <pre><code class="html">&lt;div class=&quot;oola-breadcrumbs&quot;&gt;
+  &lt;ul class=&quot;breadcrumb clearfix&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;二级页&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;current-pos&quot;&gt;当前页&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section id="typesetting">
+        <h2 class="typography-sub-heading">Typesetting 排版</h2>
+        <div class="heading-cont">
+          <h1 class="head-title">&lt;h1 class=&quot;head-title&quot;&gt;一级标题&lt;/h1&gt;</h1>
+          <h2>&lt;h2&gt;二级标题&lt;/h2&gt;</h2>
+          <h3>&lt;h3&gt;小标题&lt;/h3&gt;</h3>
+          <h3 class="subtitle">&lt;h3 class=&quot;subtitle&quot;&gt;带样式的小标题&lt;/h3&gt;</h3>
+          <p>&lt;p&gt;普通段落&lt;/p&gt;</p><a href="#" class="link">&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;普通链接&lt;/a&gt;</a><a href="#" class="link disabled">&lt;a href=&quot;#&quot; class=&quot;link disabled&quot;&gt;无效链接&lt;/a&gt;</a>
+        </div>
+      </section>
+      <section id="button">
+        <h2 class="typography-sub-heading">Button 按钮</h2>
+        <div class="button-cont">
+          <!--  Created by Dicky on 2016/9/29.-->
+          <div class="oola-btn-group"><a class="oola-btn btn-s">小尺按钮</a><a class="oola-btn btn-s btn-main">主题按钮</a><a class="oola-btn btn-s btn-red">红色按钮</a><a class="oola-btn btn-s btn-green">绿色按钮</a><a class="oola-btn btn-s btn-gray">灰色按钮</a><a class="oola-btn btn-s btn-gray disabled">禁用按钮</a>
+          </div>
+          <div class="oola-btn-group"><a class="oola-btn">默认按钮</a><a class="oola-btn btn-main">主题按钮</a><a class="oola-btn btn-red">红色按钮</a><a class="oola-btn btn-green">绿色按钮</a><a class="oola-btn btn-gray">灰色按钮</a><a class="oola-btn btn-gray disabled">禁用按钮</a>
+          </div>
+          <div class="oola-btn-group"><a class="oola-btn btn-l">大尺按钮</a><a class="oola-btn btn-main btn-l">主题按钮</a><a class="oola-btn btn-red btn-l">红色按钮</a><a class="oola-btn btn-green btn-l">绿色按钮</a><a class="oola-btn btn-gray btn-l">灰色按钮</a><a class="oola-btn btn-gray disabled btn-l">禁用按钮</a></div>
+        </div>
+        <div class="source-code-cont">
+          <h3>HTML</h3>
+          <pre><code class="html">&lt;div class=&quot;oola-btn-group&quot;&gt;
+  &lt;a class=&quot;oola-btn btn-s&quot;&gt;小尺按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-s btn-main&quot;&gt;主题按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-s btn-gray&quot;&gt;灰色按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-s btn-gray disabled&quot;&gt;禁用按钮&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;oola-btn-group&quot;&gt;
+  &lt;a class=&quot;oola-btn&quot;&gt;默认按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-main&quot;&gt;主题按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-gray&quot;&gt;灰色按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-gray disabled&quot;&gt;禁用按钮&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;oola-btn-group&quot;&gt;
+  &lt;a class=&quot;oola-btn btn-l&quot;&gt;大尺按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-main btn-l&quot;&gt;主题按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-gray btn-l&quot;&gt;灰色按钮&lt;/a&gt;
+  &lt;a class=&quot;oola-btn btn-gray disabled btn-l&quot;&gt;禁用按钮&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section id="modal">
+        <h2 class="typography-sub-heading">Modal 模态框</h2>
+        <div class="modal-cont">
+          <!--Created by Jingyi on 2016-8-22.
+          -->
+                    <div style="display: block;" class="modal oola-modal">
+                      <div class="modal-dialog oola-modal-sm">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">some contents
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+  &lt;div class=&quot;modal-dialog oola-modal-sm&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class=&quot;modal-title&quot;&gt;小弹框&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+      &lt;!--可选的弹层底栏--&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+                    <div style="display: block;" class="modal oola-modal">
+                      <div class="modal-dialog oola-modal-smd">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">some contents
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+  &lt;div class=&quot;modal-dialog oola-modal-md&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class=&quot;modal-title&quot;&gt;中弹框&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+      &lt;!--可选的弹层底栏--&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+                    <div style="display: block;" class="modal oola-modal">
+                      <div class="modal-dialog oola-modal-md">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">&times;</span></button>
+                          </div>
+                          <div class="modal-body">some contents
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;div style=&quot;display: block;&quot; class=&quot;modal oola-modal&quot;&gt;
+  &lt;div class=&quot;modal-dialog oola-modal-lg&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+        &lt;h4 class=&quot;modal-title&quot;&gt;大弹框&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;some contents&lt;/div&gt;
+      &lt;!--可选的弹层底栏--&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;oola-btn btn-main&quot;&gt;确定&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+      <section id="table">
+        <h2 class="typography-sub-heading">Table 表格</h2>
+        <!--Created by Jingyi on 2016-9-28.
+        -->
+        <div class="table-cont">
+                  <table class="table oola-table">
+                    <thead>
+                      <tr>
+                        <th>机构名称</th>
+                        <th>招聘岗位</th>
+                        <th>招聘人数</th>
+                        <th>发布时间</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;table class=&quot;table oola-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;机构名称&lt;/th&gt;
+      &lt;th&gt;招聘岗位&lt;/th&gt;
+      &lt;th&gt;招聘人数&lt;/th&gt;
+      &lt;th&gt;发布时间&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-07-15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;联合国教科文&lt;/td&gt;
+      &lt;td&gt;志愿者教师&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-04-01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+                  <table class="table oola-table oola-table-row">
+                    <thead>
+                      <tr>
+                        <th>机构名称</th>
+                        <th>招聘岗位</th>
+                        <th>招聘人数</th>
+                        <th>发布时间</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;table class=&quot;table oola-table oola-table-row&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;机构名称&lt;/th&gt;
+      &lt;th&gt;招聘岗位&lt;/th&gt;
+      &lt;th&gt;招聘人数&lt;/th&gt;
+      &lt;th&gt;发布时间&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-07-15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;联合国教科文&lt;/td&gt;
+      &lt;td&gt;志愿者教师&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-04-01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+                  <table class="table oola-table oola-table-bordered">
+                    <thead>
+                      <tr>
+                        <th>机构名称</th>
+                        <th>招聘岗位</th>
+                        <th>招聘人数</th>
+                        <th>发布时间</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;table class=&quot;table oola-table oola-table-bordered&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;机构名称&lt;/th&gt;
+      &lt;th&gt;招聘岗位&lt;/th&gt;
+      &lt;th&gt;招聘人数&lt;/th&gt;
+      &lt;th&gt;发布时间&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-07-15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;联合国教科文&lt;/td&gt;
+      &lt;td&gt;志愿者教师&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-04-01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+                  <table class="table oola-table oola-table-hover">
+                    <thead>
+                      <tr>
+                        <th>机构名称</th>
+                        <th>招聘岗位</th>
+                        <th>招聘人数</th>
+                        <th>发布时间</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                      <tr>
+                        <td>斯坦福亚裔肝脏中心</td>
+                        <td>实习生/志愿者</td>
+                        <td>若干人</td>
+                        <td>2014-07-15</td>
+                      </tr>
+                    </tbody>
+                  </table>
+          <div class="source-code-cont">
+            <h3>HTML</h3>
+            <pre><code class="html">&lt;table class=&quot;table oola-table oola-table-hover&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;机构名称&lt;/th&gt;
+      &lt;th&gt;招聘岗位&lt;/th&gt;
+      &lt;th&gt;招聘人数&lt;/th&gt;
+      &lt;th&gt;发布时间&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;斯坦福亚裔肝脏中心&lt;/td&gt;
+      &lt;td&gt;实习生/志愿者&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-07-15&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;联合国教科文&lt;/td&gt;
+      &lt;td&gt;志愿者教师&lt;/td&gt;
+      &lt;td&gt;若干人&lt;/td&gt;
+      &lt;td&gt;2014-04-01&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+      <section id="notification">
+        <h2 class="typography-sub-heading">Notification 信息提示（弹框）</h2>
+        <div class="notice-cont">
+          <p class="notice-block">文本提示基类class="notice-block"</p>
+          <p class="notice-block info-notice">class="notice-block info-notice"</p>
+          <p class="notice-block success-notice">class="notice-block success-notice"</p>
+          <p class="notice-block warning-notice">class="notice-block warning-notice"</p>
+          <p class="notice-block error-notice">class="notice-block error-notice"</p>
+        </div>
+        <div class="source-code-cont">
+          <h3>HTML</h3>
+          <pre><code class="html">&lt;div class=&quot;notice-cont&quot;&gt;
+  &lt;p class=&quot;notice-block&quot;&gt;文本提示基类class=&quot;notice-block&quot;&lt;/p&gt;
+  &lt;p class=&quot;notice-block info-notice&quot;&gt;class=&quot;notice-block info-notice&quot;&lt;/p&gt;
+  &lt;p class=&quot;notice-block success-notice&quot;&gt;class=&quot;notice-block success-notice&quot;&lt;/p&gt;
+  &lt;p class=&quot;notice-block warning-notice&quot;&gt;class=&quot;notice-block warning-notice&quot;&lt;/p&gt;
+  &lt;p class=&quot;notice-block error-notice&quot;&gt;class=&quot;notice-block error-notice&quot;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section id="form">
+        <h2 class="typography-sub-heading">Form 表单</h2>
+        <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">手机号：</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static">158****7117</p>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">姓名：</label>
+                    <div class="col-sm-10 has-error">
+                      <input placeholder="请输入您的姓名" class="form-control">
+                      <div class="help-block">姓名不能为空！</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">邮箱：</label>
+                    <div class="col-sm-10">
+                      <div class="input-group">
+                        <input type="text" placeholder="请输入您的邮箱" class="form-control"><span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                      </div>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">工作：</label>
+                    <div class="col-sm-10">
+                              <select class="form-control">
+                                <option>Web前端</option>
+                                <option>IOS开发</option>
+                                <option>Android开发</option>
+                              </select>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">性别：</label>
+                    <div class="col-sm-10">
+                              <label class="radio-inline">
+                                <input type="radio" name="sex" id="male">
+                                <label for="male"></label>男
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="sex" id="female">
+                                <label for="female"></label>女
+                              </label>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">爱好：</label>
+                    <div class="col-sm-10">
+                              <label class="checkbox-inline">
+                                <input type="checkbox" id="football">
+                                <label for="football"></label>足球
+                              </label>
+                              <label class="checkbox-inline">
+                                <input type="checkbox" id="basketball">
+                                <label for="basketball"></label>篮球
+                              </label>
+                              <label class="checkbox-inline">
+                                <input type="checkbox" id="music">
+                                <label for="music"></label>音乐
+                              </label>
+                              <label class="checkbox-inline">
+                                <input type="checkbox" id="draw">
+                                <label for="draw"></label>画画
+                              </label>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">简介：</label>
+                    <div class="col-sm-10">
+                      <textarea placeholder="请输入自我简介" class="form-control"></textarea>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10 has-error">
+                              <div class="checkbox">
+                                <label>
+                                  <input type="checkbox" id="agree">
+                                  <label for="agree"></label>同意XXX协议
+                                </label>
+                              </div>
+                      <div class="help-block">请勾选同意协议！</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" disabled class="oola-btn">提交</button>
+                      <div class="help-block"></div>
+                    </div>
+                  </div>
+        </form>
+        <div class="source-code-cont">
+          <h3>HTML</h3>
+          <pre><code class="html">&lt;form class=&quot;form-horizontal&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;手机号：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;p class=&quot;form-control-static&quot;&gt;158****7117&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;姓名：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;input placeholder=&quot;请输入您的姓名&quot; class=&quot;form-control&quot;&gt;
+      &lt;div class=&quot;help-block&quot;&gt;姓名不能为空！&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;邮箱：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10 has-error&quot;&gt;
+      &lt;div class=&quot;input-group&quot;&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;请输入您的邮箱&quot; class=&quot;form-control&quot;&gt;&lt;span class=&quot;input-group-addon&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-envelope&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;help-block&quot;&gt;邮箱不能为空！&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;工作：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;select class=&quot;form-control&quot;&gt;
+        &lt;option&gt;IOS开发&lt;/option&gt;
+        &lt;option&gt;Web前端开发Web前端开发Web前端开发Web前端开发Web前端开发Web前端开发&lt;/option&gt;
+        &lt;option&gt;Android开发&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;性别：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;label class=&quot;radio-inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;female&quot; id=&quot;female&quot; checked=&quot;checked&quot;&gt;
+        &lt;label for=&quot;female&quot;&gt;&lt;/label&gt;女
+      &lt;/label&gt;
+      &lt;label class=&quot;radio-inline&quot;&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;sex&quot; value=&quot;male&quot; id=&quot;male&quot;&gt;
+        &lt;label for=&quot;male&quot;&gt;&lt;/label&gt;男
+      &lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;col-sm-2 control-label&quot;&gt;简介：&lt;/label&gt;
+    &lt;div class=&quot;col-sm-10&quot;&gt;
+      &lt;textarea rows=&quot;3&quot; placeholder=&quot;请输入自我简介&quot; class=&quot;form-control&quot;&gt;&lt;/textarea&gt;
+      &lt;div class=&quot;help-block&quot;&gt;简介不能为空！&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;label&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;agree&quot;&gt;
+          &lt;label for=&quot;agree&quot;&gt;&lt;/label&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;Agree the Protocol&lt;/a&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;help-block&quot;&gt;请勾选同意协议！&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;oola-btn&quot;&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+      </section>
+      <section id="pagination">
+        <h2 class="typography-sub-heading">Pagination 分页器</h2>
+        <!--Created by Jingyi on 2016-9-7.-->
+        <div class="oola-pagination">
+          <ul class="fl">
+            <div class="pagination-slider"></div>
+            <li class="page-prev page-btn-disabled"><a href="#"></a></li>
+            <li class="active"><a href="#" class="page">1</a></li>
+            <li><a href="#" class="page">2</a></li>
+            <li><a href="#" class="page">3</a></li>
+            <li><a href="#" class="page">4</a></li>
+            <li><a href="#" class="page">5</a></li>
+            <li><a href="#" class="page">6</a></li>
+            <li class="page-next"><a href="#"></a></li>
+          </ul>
+        </div>
+        <div class="source-code-cont">
+          <h3>HTML</h3>
+          <pre><code class="html">&lt;div class=&quot;oola-pagination&quot;&gt;
+  &lt;ul class=&quot;fl&quot;&gt;
+    &lt;div class=&quot;pagination-slider&quot;&gt;&lt;/div&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page-prev page-btn-disabled&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+    ...
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;8&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page&quot;&gt;9&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;page-next&quot;&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+      <section id="graphic">
+        <h2 class="typography-sub-heading">Graphic 图文</h2>
+        <div style="margin: 0" class="test-cont"></div>
+        <!--
+        Created by Jingyi on 2016-9-29.
+        
+        -->
+        <h3 class="subtitle">资讯列表</h3>
+        <div class="news-list clearfix">
+                  <figure class="fl news-item first-news" value="0"><a href="#">
+                      <div class="img-cont"><img src="img/index/news-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">资讯项目名称</p>
+                        <p class="figure-desc">资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍</p>
+                      </figcaption></a></figure>
+                  <figure class="fl news-item" value="1"><a href="#">
+                      <div class="img-cont"><img src="img/index/news-02.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">资讯项目名称</p>
+                        <p class="figure-desc">资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍</p>
+                      </figcaption></a></figure>
+                  <figure class="fl news-item" value="2"><a href="#">
+                      <div class="img-cont"><img src="img/index/news-02.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">资讯项目名称</p>
+                        <p class="figure-desc">资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍</p>
+                      </figcaption></a></figure>
+                  <figure class="fl news-item" value="3"><a href="#">
+                      <div class="img-cont"><img src="img/index/news-02.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">资讯项目名称</p>
+                        <p class="figure-desc">资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍</p>
+                      </figcaption></a></figure>
+                  <figure class="fl news-item" value="4"><a href="#">
+                      <div class="img-cont"><img src="img/index/news-02.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">资讯项目名称</p>
+                        <p class="figure-desc">资讯项目介绍资讯项目介绍资讯项目介绍资讯项目介绍</p>
+                      </figcaption></a></figure>
+        </div>
+        <h3 class="subtitle">产品列表</h3>
+        <div class="product-list clearfix">
+                  <figure class="fl product-item" value="5"><a href="#">
+                      <div class="img-cont"><img src="img/index/product-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">环保绿色宝宝洗面奶</p>
+                        <p class="figure-desc"><span>价格：</span><span>55积分</span></p>
+                      </figcaption></a></figure>
+                  <figure class="fl product-item" value="6"><a href="#">
+                      <div class="img-cont"><img src="img/index/product-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">环保绿色宝宝洗面奶</p>
+                        <p class="figure-desc"><span>价格：</span><span>55积分</span></p>
+                      </figcaption></a></figure>
+                  <figure class="fl product-item" value="7"><a href="#">
+                      <div class="img-cont"><img src="img/index/product-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">环保绿色宝宝洗面奶</p>
+                        <p class="figure-desc"><span>价格：</span><span>55积分</span></p>
+                      </figcaption></a></figure>
+                  <figure class="fl product-item" value="8"><a href="#">
+                      <div class="img-cont"><img src="img/index/product-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">环保绿色宝宝洗面奶</p>
+                        <p class="figure-desc"><span>价格：</span><span>55积分</span></p>
+                      </figcaption></a></figure>
+                  <figure class="fl product-item" value="9"><a href="#">
+                      <div class="img-cont"><img src="img/index/product-01.jpg"></div>
+                      <figcaption>
+                        <p class="figure-title">环保绿色宝宝洗面奶</p>
+                        <p class="figure-desc"><span>价格：</span><span>55积分</span></p>
+                      </figcaption></a></figure>
+        </div>
+        <!--
+        Created by Jingyi on 2016-10-11.
+        
+        -->
+        <h3 class="subtitle">评价列表</h3>
+        <div class="comment-list clearfix">
+                  <div class="comment-cont fl hover-shadow">
+                    <div class="comment-detail">
+                      <p>虽然噢啦的回收给的是积分，虽然噢啦的回收给的是积分，但能兑换到很多不错的礼品，反正机器价值也不高，选择有公益的回收平台更放心。</p><span class="publish-time">20小时前</span>
+                    </div>
+                    <div class="comment-user clearfix">
+                      <div class="user-avatar-cont fl"><img src="img/common/user-avatar.png"></div>
+                      <div class="user-cont-R fl">
+                        <p title="大大熊二大大熊二大大熊二大大熊二" class="user-name">大大熊二大大熊二大大熊二大大熊二</p>
+                        <p>回收了<a href="#" title="iPhone 6s plusplusplus" class="recycle-product">iPhone 6s plusplusplus</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment-cont fl hover-shadow">
+                    <div class="comment-detail">
+                      <p>虽然噢啦的回收给的是积分，虽然噢啦的回收给的是积分，但能兑换到很多不错的礼品，反正机器价值也不高，选择有公益的回收平台更放心。</p><span class="publish-time">20小时前</span>
+                    </div>
+                    <div class="comment-user clearfix">
+                      <div class="user-avatar-cont fl"><img src="img/common/user-avatar.png"></div>
+                      <div class="user-cont-R fl">
+                        <p title="大大熊二大大熊二大大熊二大大熊二" class="user-name">大大熊二大大熊二大大熊二大大熊二</p>
+                        <p>回收了<a href="#" title="iPhone 6s plusplusplus" class="recycle-product">iPhone 6s plusplusplus</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment-cont fl hover-shadow">
+                    <div class="comment-detail">
+                      <p>虽然噢啦的回收给的是积分，虽然噢啦的回收给的是积分，但能兑换到很多不错的礼品，反正机器价值也不高，选择有公益的回收平台更放心。</p><span class="publish-time">20小时前</span>
+                    </div>
+                    <div class="comment-user clearfix">
+                      <div class="user-avatar-cont fl"><img src="img/common/user-avatar.png"></div>
+                      <div class="user-cont-R fl">
+                        <p title="大大熊二大大熊二大大熊二大大熊二" class="user-name">大大熊二大大熊二大大熊二大大熊二</p>
+                        <p>回收了<a href="#" title="iPhone 6s plusplusplus" class="recycle-product">iPhone 6s plusplusplus</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment-cont fl hover-shadow">
+                    <div class="comment-detail">
+                      <p>虽然噢啦的回收给的是积分，虽然噢啦的回收给的是积分，但能兑换到很多不错的礼品，反正机器价值也不高，选择有公益的回收平台更放心。</p><span class="publish-time">20小时前</span>
+                    </div>
+                    <div class="comment-user clearfix">
+                      <div class="user-avatar-cont fl"><img src="img/common/user-avatar.png"></div>
+                      <div class="user-cont-R fl">
+                        <p title="大大熊二大大熊二大大熊二大大熊二" class="user-name">大大熊二大大熊二大大熊二大大熊二</p>
+                        <p>回收了<a href="#" title="iPhone 6s plusplusplus" class="recycle-product">iPhone 6s plusplusplus</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="comment-cont fl hover-shadow">
+                    <div class="comment-detail">
+                      <p>虽然噢啦的回收给的是积分，虽然噢啦的回收给的是积分，但能兑换到很多不错的礼品，反正机器价值也不高，选择有公益的回收平台更放心。</p><span class="publish-time">20小时前</span>
+                    </div>
+                    <div class="comment-user clearfix">
+                      <div class="user-avatar-cont fl"><img src="img/common/user-avatar.png"></div>
+                      <div class="user-cont-R fl">
+                        <p title="大大熊二大大熊二大大熊二大大熊二" class="user-name">大大熊二大大熊二大大熊二大大熊二</p>
+                        <p>回收了<a href="#" title="iPhone 6s plusplusplus" class="recycle-product">iPhone 6s plusplusplus</a></p>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+      </section>
+      <section id="progress-bar">
+        <h2 class="typography-sub-heading">Progress Bar 进度条</h2>
+        <div class="progress-cont">
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;" class="progress-bar">40% class="progress-bar"</div>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" class="progress-bar progress-bar-striped">50% class="progress-bar progress-bar-striped"</div>
+          </div>
+          <div class="progress">
+            <div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" class="progress-bar progress-bar-striped active">60% class="progress-bar progress-bar-striped active"</div>
+          </div>
+          <script type="text/html" style="display:block"><input type="text" /></script>
+        </div>
+      </section>
+    </div>
+    <div class="common-footer">
+      <div class="content-area mar-cent clearfix">
+        <div class="copyright">©CopyRight 噢啦网公共样式基于Bootstrap框架</div>
+      </div>
+    </div>
+    <script src="js/plugins/jquery/jquery-1.11.3.js"></script>
+    <script src="js/components/oola-pagination.js"></script>
+    <script src="js/plugins/highlight.pack.js"></script>
+    <script>
+      $(document).ready(function() {
+      	$('pre code').each(function(i, block) {
+      		hljs.highlightBlock(block);
+      	});
+      	oolaPagination();
+      });
+    </script>
+  </body>
+</html>

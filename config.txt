@@ -1,0 +1,4 @@
+scss:
+arguments:    --no-cache --update $FileName$:..\..\dist\css\$FileNameWithoutExtension$.css
+jade:
+arguments:    -P $FileName$  -o ..\..\

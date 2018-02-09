@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* Form 表单 */
+label.control-label{
+  font-weight: normal;
+  color: $clrCancel;
+  margin-bottom: 0;
+}
+.form-horizontal .form-group{
+  margin-left: -$minSpacing;
+  margin-right: -$minSpacing;
+}
+.form-group{
+  margin-bottom: $minSpacing*2;
+}
+
+/* 去除下拉框默认样式 */
+select{
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background: url("../../img/common/select-triangle.png") no-repeat scroll right center #ffffff!important;
+  text-indent: 0.01px;          /* Removes default arrow from firefox*/
+  text-overflow: "";
+  padding-right: 40px!important;
+}
+select::-ms-expand { display: none; }
+
+/* 单选框和复选框样式 */
+input[type="radio"], input[type="checkbox"]{
+  visibility: hidden;
+  //-moz-appearance: none;
+  //-webkit-appearance: none;
+  //appearance: none;
+}
+.form-horizontal{
+  .radio label[for], .radio-inline label[for],
+  .checkbox label[for], .checkbox-inline label[for]{
+    margin-top: -4px;
+  }
+}
+.radio label[for], .radio-inline label[for],
+.checkbox label[for], .checkbox-inline label[for]{
+  position: absolute;
+  min-height: 14px;
+  max-height: 14px;
+  min-width: 14px;
+  max-width: 14px;
+  left: 0;
+  top: 50%;
+  border: 1px solid $clrFormBorder;
+  margin-top: -7px;
+  margin-bottom: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.radio label[for], .radio-inline label[for]{
+  border-radius: 50%;
+}
+input[type="radio"]:checked + label{
+  background-color: $clrMain;
+}
+input[type="checkbox"]:checked + label:before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3px;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid $clrMain;
+  border-bottom: 2px solid $clrMain;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* 输入控件样式 */
+textarea{
+  resize: none;
+}
+/* 上传文件控件 */
+input[type="file"]{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.upload-control{
+  position: relative;
+  overflow: hidden;
+}
+
+.form-control{
+  height: 36px;
+  border-color: $clrFormBorder;
+  border-radius: 2px;
+  box-shadow: none;
+  &:focus{
+    border-color: $clrMain;
+    box-shadow: none
+  }
+  &.form-control-lg{
+    width: 336px;
+  }
+  &.form-control-md{
+    width: 204px;
+  }
+  &.form-control-sm{
+    width: 156px;
+  }
+}
+/* 额外元素样式 */
+.input-group-addon{
+  border-color: $clrFormBorder;
+  background-color: $clrWhiteBg;
+  border-radius: 0;
+  padding: 6px 10px;
+  .glyphicon{
+    color: $clrFormBorder;
+  }
+}
+/* 辅助文本、校验报错状态样式 */
+.help-block{
+  display: none;
+}
+.has-error{
+  .control-label{
+    color: $clrHtmlFont;
+  }
+  .form-control{
+    border-color: $clrHtmlRed!important;
+    &:focus{
+      border-color: $clrHtmlRed;
+      box-shadow: none;
+    }
+  }
+  .input-group-addon{
+    color: $clrHtmlRed;
+    border-color: $clrHtmlRed!important;
+    background-color: lighten($clrHtmlRed,28%);
+  }
+  .help-block{
+    display: block;
+    clear: both;
+    color: $clrHtmlRed;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+    &.inline-help{
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+}
+/* 校验成功状态样式 */
+.has-success{
+  .form-control{
+    border-color: #3c763d!important;
+    box-shadow: none;
+    &:focus{
+      border-color: #3c763d;
+      box-shadow: none;
+    }
+  }
+  .input-group-addon{
+    color: #3c763d;
+    border-color: #3c763d!important;
+    background-color: lighten(#3c763d,28%);
+  }
+}
+/* 焦点状态 */
+.has-focus{
+  .form-control, .input-group-addon{
+    border-color: $clrMain;
+  }
+}

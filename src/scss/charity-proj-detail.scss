@@ -1,0 +1,404 @@
+@charset "UTF-8";
+
+@import "global";
+
+body{
+  background-color: $clrHtmlBg;
+}
+
+// 项目预览
+.proj-preview{
+  .proj-img{
+    width: 852px;
+    height: 479px;
+  }
+}
+
+// 项目大概
+.about-content {
+  padding-right: $minSpacing*3;
+  padding-left: $minSpacing*3;
+  width: calc(100% - 852px);
+  height: 479px;
+  background-color: #ffffff;
+
+  h2 {
+    margin-top: $minSpacing*4;
+    margin-bottom: $minSpacing*3;
+    @extend %fontH2;
+    color: $clrMain;
+    font-weight: bold;
+  }
+
+  p {
+    margin: $minSpacing 0;
+    @extend %fontNormal;
+
+    span {
+      margin: 0 $minSpacing/2;
+      font-weight: bold;
+      color: $clrMain;
+      &.percent{
+        color: $clrTextRed;
+      }
+    }
+  }
+
+  .progress {
+    height: 6px;
+    margin-top: $minSpacing*2;
+    margin-bottom: $minSpacing*2;
+    .progress-bar {
+      width: 2.3%;
+    }
+  }
+
+  .btn-red{
+    display: block;
+    margin-top: $minSpacing*5;
+    margin-bottom: $minSpacing*5;
+  }
+
+  // 底栏
+  .bottom-bar {
+    margin-top: $minSpacing*2;
+
+    .bdsharebuttonbox {
+      @extend %fontSmall;
+      vertical-align: middle;
+
+      a {
+        display: inline-block;
+        margin: 0 10px 4px;
+        width: 20px;
+        height: 16px;
+        float: none;
+        vertical-align: middle;
+
+        &:hover{
+          opacity: .8;
+        }
+      }
+
+      @for $i from 1 through 4 {
+        $bgArr: 'wechat' 'weibo' 'qq' 'renren';
+        a:nth-child(#{$i}) {
+          background: url("../../img/common/icon-share-#{nth($bgArr,$i)}.png") no-repeat center center;
+        }
+      }
+    }
+  }
+}
+
+// 项目详情
+.project-detail{
+  margin-top: $minSpacing*2;
+}
+
+.detail-content-L{
+  margin-bottom: $minSpacing*2;
+  padding: 0 $minSpacing*2 $minSpacing*2;
+  width: 852px;
+  background-color: #ffffff;
+
+  .content-container {
+    padding: $minSpacing*2 $minSpacing*2 0;
+    min-height: 200px;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// tab 标签样式
+.project-nav {
+  border-bottom: 1px solid $clrBorder;
+  height: 42px;
+
+  li {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+    margin: 9px 0;
+
+    &:before{
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: $clrMain;
+      bottom: -9px;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: -webkit-transform ease 0.25s;
+      -moz-transition: -moz-transform ease 0.25s;
+      -ms-transition: -ms-transform ease 0.25s;
+      -o-transition: -o-transform ease 0.25s;
+      transition: transform ease 0.25s;
+    }
+
+    & + li{
+      border-left: 1px solid $clrBorder;
+    }
+
+    a {
+      @extend %fontNormal;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      padding: 2px 0;
+    }
+
+    &:hover, &.active {
+      &:before{
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+
+      a {
+        color: $clrMain;
+      }
+    }
+  }
+}
+
+// 项目进展
+.proj-progress {
+  .proj-name {
+    .img-cont {
+      width: 52px;
+      height: 52px;
+      border: 1px solid $clrBorder;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: $minSpacing;
+      margin-left: $minSpacing*3;
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    h2 {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  }
+
+  .proj-progress-item {
+    &:nth-child(2) {
+      span.update-time {
+        margin-top: $minSpacing*3;
+      }
+
+      .progress-content {
+        padding-top: $minSpacing*3;
+      }
+    }
+
+    span.update-time {
+      display: inline-block;
+      margin-top: $minSpacing*2;
+      width: 44px;
+      text-align: right;
+    }
+
+    .progress-content {
+      position: relative;
+      padding-left: $minSpacing*3;
+      padding-top: $minSpacing*2;
+      border-left: 1px solid $clrBorder;
+      width: calc(100% - 60px);
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -10px;
+        border: 3px solid #ffffff;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: $clrMain;
+      }
+    }
+  }
+}
+
+// 项目话题
+.comment-cont {
+  // 发布话题
+  .edit-cont {
+    margin-top: $minSpacing;
+    margin-bottom: $minSpacing*2;
+
+    h3 {
+      margin-bottom: 14px;
+      color: $clrMain;
+    }
+
+    textarea {
+      border: solid 1px $clrFormBorder;
+      padding: 5px;
+      height: 104px;
+      width: 100%;
+      resize: none;
+      box-sizing: border-box;
+
+      &:focus {
+        border: 0;
+        outline: $clrMain solid 1px;
+      }
+    }
+
+    .form-group {
+      margin: $minSpacing 0;
+
+      > label {
+        margin-right: $minSpacing;
+        float: left;
+      }
+      .input-cont {
+        display: inline-block;
+        float: left;
+
+        img.code{
+          margin: 0 $minSpacing;
+          height: 36px;
+          width: 102px;
+        }
+
+        .caution{
+          line-height: 36px;
+          color: $clrHtmlBlue;
+        }
+      }
+    }
+  }
+}
+
+// 话题列表
+.comment-list-cont {
+  border-top: solid 1px $clrBorder;
+
+  .comment-item {
+    border-bottom: solid 1px $clrBorder;
+    padding: $minSpacing 0;
+
+    .img-cont {
+      .img-inner-cont {
+        border: solid 1px $clrBorder;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+
+        a {
+          display: block;
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .text-cont {
+      width: calc(100% - 62px);
+
+      h3{
+        margin-top: $minSpacing/2;
+        @extend %fontNormal;
+        font-weight: bold;
+      }
+      .publish-time {
+        color: $clrCancel;
+        font-size: 12px;
+      }
+      p {
+        margin-top: 14px;
+      }
+      .btn-cont {
+        margin-top: 28px;
+        a {
+          margin-left: 28px;
+          font-size: 12px;
+          img {
+            margin-top: 2px;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 右栏
+.notice-list-cont{
+  ul{
+    li{
+      padding-left: 0;
+
+      &:before{
+        display: none;
+      }
+    }
+  }
+  // 项目动态
+  ul.donate-dynamic{
+    li{
+      span.num{
+        display: inline;
+        margin: 0 $minSpacing/2;
+        color: $clrMain;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // 推荐关注
+  $imgW: 120px;
+  .recommend-list{
+    .rcd-img-cont{
+      margin-right: $minSpacing;
+      width: $imgW;
+      height: $imgW*.75;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .rcd-txt-cont{
+      width: calc(100% - 132px);
+
+      >h3{
+        font-size: 14px;
+        font-weight: bold;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      >p{
+        margin: $minSpacing 0;
+        font-size: 12px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}

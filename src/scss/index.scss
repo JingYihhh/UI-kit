@@ -1,0 +1,229 @@
+//  Created by Dicky on 2016/9/29.
+@charset "UTF-8";
+@import "global.scss";
+@import "components/index/_m-index-subtitle";
+
+body{
+  background-color: $clrWhiteBg;
+}
+section:nth-child(even){
+  border-bottom: 1px solid $clrWhiteBg;
+}
+section:nth-child(odd){
+  background-color: $clrHtmlBg;
+  border-bottom: 1px solid $clrHtmlBg;
+}
+
+/*清除section layout上的padding*/
+section{
+  padding: 0px;
+}
+
+.banner-cont {
+  //width: 1920px;
+  height: 436px;
+  min-width: 1200px;
+  max-width: 1920px;
+  position: relative;
+  .swiper-container {
+    width: 1920px;
+    height: 436px;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+  }
+}
+
+.banner-btn-cont {
+  position: absolute;
+  top: 50%;
+  z-index:9;
+  left: 50%;
+  margin-left: -88px;
+  .oola-btn{
+    opacity: .9;
+    border-color: $clrWhiteBg;
+    &:hover{
+      border-color: $clrMain;
+    }
+  }
+  .btn-recycle{
+    background: $clrWhiteBg;
+    color: $clrWhiteBg!important;
+    &:after{
+      box-shadow: inset 0 0 0 200px $clrGreen!important;
+    }
+    &:hover{
+      color: $clrGreen!important;
+      border-color: $clrGreen;
+      &:after{
+        box-shadow: inset 0 0 0 0 $clrWhiteBg!important;
+      }
+    }
+  }
+}
+
+.recycle-info-cont {
+  padding: $minSpacing*2 0px;
+  .recycle-info-cont-inner {
+    padding: 0px $minSpacing*8;
+  }
+}
+
+.recycle-info-tag {
+  display: block;
+  width: 312px;
+  height: 156px;
+  padding: 32px $minSpacing*2;
+  background: $clrWhiteBg;
+  margin: auto $minSpacing;
+  .info-icon {
+    background: url("../../img/index/recycle-info-icons.png");
+    width: 84px;
+    height: 90px;
+  }
+  @for $i from 0 to 3 {
+    .icon-#{($i+1)} {
+      opacity: 0;
+      background-position: #{$i*(-84)}px 0px;
+      -webkit-transition: all ease 0.2s;
+      -moz-transition: all ease 0.2s;
+      transition: all ease 0.2s;
+      -webkit-animation: fadeIn 0.6s ease-out forwards 0.2s*$i;
+      -o-animation: fadeIn 0.6s ease-out forwards 0.2s*$i;
+      animation: fadeIn 0.6s ease-out forwards 0.2s*$i;
+    }
+  }
+  .info-text {
+    margin-left: $minSpacing*2;
+    .num-cont{
+      height: 54px;
+    }
+    .num{
+      margin-top: $minSpacing*2;
+      display: inline-block;
+      height: 30px;
+      min-width: 36px;
+      text-align: right;
+      vertical-align: text-bottom;
+      -webkit-transition: all ease 0.2s;
+      -moz-transition: all ease 0.2s;
+      -ms-transition: all ease 0.2s;
+      -o-transition: all ease 0.2s;
+      transition: all ease 0.2s;
+    }
+    .num i{
+      display: inline-block;
+      width: 18px;
+      height: 26px;
+      background: url("../../img/common/number.png") no-repeat 0 -340px;
+    }
+    .text {
+      color: $clrFooter;
+      margin-top: $minSpacing;
+    }
+  }
+}
+
+.desc-text-cont {
+  margin-top: $minSpacing*2;
+  .info-text {
+    text-align: center;
+  }
+  .info-title {
+    text-align: center;
+    @extend %fontH1;
+    font-weight: bold;
+    margin-bottom: $minSpacing*2;
+  }
+}
+
+.recycle-info-btn-cont {
+  width: 106px;
+  margin-top: $minSpacing*2;
+}
+
+.exchange-head {
+  max-width: 1920px;
+  min-width: 1200px;
+  height: 168px;
+  position: relative;
+  overflow: hidden;
+  .banner {
+    width: 1920px;
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+  }
+}
+
+.exchange-footer{
+  margin-top: 0px;
+  margin-bottom: $minSpacing*2;
+}
+
+.news-cont {
+  padding-bottom: $minSpacing*2;
+}
+
+#swiper-exchange{
+  width: 1176px;
+}
+
+.swiper-pagination-exchange {
+  margin-top: 5px;
+  text-align: center;
+  .swiper-pagination-bullet {
+    height: 10px;
+    width: 120px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin: $minSpacing;
+  }
+  .swiper-pagination-bullet-active {
+    background: $clrMain;
+  }
+}
+
+/* recycle icon fadeIn keyframes */
+@-webkit-keyframes fadeIn {
+  from{
+    margin-top: -$minSpacing;
+    opacity: 0;
+  }
+  to{
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from{
+    margin-top: -$minSpacing;
+    opacity: 0;
+  }
+  to{
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  from{
+    margin-top: -$minSpacing;
+    opacity: 0;
+  }
+  to{
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from{
+    margin-top: -$minSpacing;
+    opacity: 0;
+  }
+  to{
+    margin-top: 0;
+    opacity: 1;
+  }
+}

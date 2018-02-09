@@ -1,0 +1,116 @@
+//  Created by Dicky on 2016/12/20.
+.tag-cont {
+  border: solid 1px $clrBorder;
+  width: 456px;
+  padding: 11px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  .tag-main {
+    border-right: solid 1px $clrBorder;
+    width: 356px;
+    vertical-align: text-top;
+    height: 72px;
+  }
+  .project-img-cont {
+    width: 96px;
+    height: 72px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .product-img-cont {
+    width: 72px;
+    height: 72px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .tag-content {
+    margin-left: 12px;
+    width: 235px;
+    h4 {
+      font-weight: bold;
+      margin-bottom: 12px;
+      .panel{
+        width: 46px;
+      }
+      a{
+        @extend %fontNormal;
+      }
+    }
+    p {
+      margin-top: 5px;
+      @extend %fontSmall;
+      color: $clrCancel;
+    }
+  }
+  .tag-operation {
+    width: 75px;
+    border-left: solid 1px $clrBorder;
+    text-align: center;
+  }
+  .btn.btn-link {
+    padding: 0px;
+    margin-left: 12px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    line-height: 1;
+    font-size: 12px;
+  }
+  .btn-link.btn-attention {
+    color: $clrHtmlRed;
+  }
+  .panel{
+    height: 18px;
+    line-height: 17px;
+    color: $clrWhiteBg;
+    background-color: $clrCancel;
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-left: 12px;
+    display: inline-block;
+    &.attention{
+      background: $clrHtmlRed;
+    }
+  }
+  &.tag-address{
+    .addr-content{
+      width: 356px;
+      height: 100px;
+      overflow: hidden;
+    }
+    .tag-main{
+      //height: 83px;
+    }
+    .addrInfo-group{
+      margin-top: 3px;
+      margin-bottom: 3px;
+      .addrInfo-label{
+        @extend %fontSmall;
+        width: 62px;
+        text-align: right;
+        color: $clrCancel;
+      }
+      span{
+        @extend %fontSmall;
+        margin-left: $minSpacing;
+        width: calc(100% - 86px);
+      }
+      .bold{
+        font-weight: bold;
+        width: inherit;
+      }
+      .panel{
+        width: 56px;
+        margin-top: -1px;
+      }
+    }
+  }
+  &:nth-child(2n){
+    margin-right: 0px;
+  }
+}

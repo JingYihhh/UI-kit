@@ -1,0 +1,15 @@
+//  Created by Dicky on 2016/12/20.
+
+mixin createContent(strArr)
+    h4
+        a(href="#") 为留守儿童送出一张温馨贴
+        if attributes.labelFlag
+            case attributes.labelFlag
+                when "1"
+                    .panel.attention
+                        | 进行中
+                when "2"
+                    .panel
+                        | 已结束
+    each str in strArr
+        p= str

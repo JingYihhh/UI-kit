@@ -1,0 +1,195 @@
+@charset "UTF-8";
+@import "global.scss";
+
+.content-main{
+  padding-top: $minSpacing*2;
+  .content-area{
+    padding: 0 $contentPd;
+  }
+}
+
+// 左侧边栏
+.side-title {
+  height: 42px;
+  font-size: 14px;
+  line-height: 42px;
+  margin: 0 24px;
+  border-bottom: 1px solid $clrBorder;
+}
+
+.latest-bar, .hot-line-bar{
+  width: $sideBarW;
+  border: 1px solid $clrBorder;
+  margin-top: $minSpacing*2;
+}
+
+// 最近回收
+.latest-product-cont{
+  padding: 0 $minSpacing*2;
+  ul {
+    li {
+      border-bottom: 1px solid $clrBorder;
+      padding: $minSpacing 0;
+      img.img-product {
+        width: 60px;
+        height: 60px;
+        margin-right: $minSpacing;
+      }
+      span {
+        width: 106px - $contentPd;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: $clrHtmlFont;
+        margin-top: 8px;
+        @extend %fontSmall;
+      }
+    }
+  }
+}
+//服务热线
+.hot-line-bar{
+  p{
+    padding: $minSpacing $minSpacing*2;
+    line-height: 24px;
+  }
+}
+
+// 主内容列表
+//筛选表单
+.main-list{
+  width: 936px;
+  .form-group{
+    margin: $minSpacing*2 0 0;
+  }
+  .control-label{
+    padding: 0;
+    color: $clrCancel;
+  }
+  .radio-cont{
+    padding-left: 80px;
+  }
+  .radio-inline{
+    padding: 0;
+    margin-left: 0;
+    margin-right: 10px;
+    input[type="radio"]{
+      margin: 0;
+    }
+    span{
+      font-size: 12px;
+    }
+    input[type="radio"]:checked + span{
+      background-color: transparent;
+      color: $clrMain;
+    }
+  }
+}
+.filter-bar{
+  padding: $minSpacing $minSpacing*2;
+  border: 1px solid $clrBorder;
+  h3{
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+// 选择品牌
+.brand-cont {
+  background: $clrWhiteBg;
+  #btn-brand-more {
+    @extend %fontSmall;
+    font-weight: normal;
+    cursor: pointer;
+    margin-top: 3px;
+    i {
+      background: url("../../img/recycle/list_symbol_sprit.png");
+      background-position: 0px -6px;
+      transition-duration: .3s;
+      height: 6px;
+      width: 12px;
+      overflow: hidden;
+      display: block;
+      margin-top: 4px;
+      margin-left: 4px;
+    }
+  }
+  &.on{
+    .brand-cont-outter{
+      height: 210px;
+      overflow: auto;
+    }
+    h3 #btn-brand-more{
+      color: $clrMain;
+      i {
+        background-position: 0 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .brand-cont-outter{
+    height: 85px;
+    width: 898px;
+    margin-top: $minSpacing;
+    overflow: hidden;
+    -webkit-transition: all linear 0.125s;
+    -moz-transition: all linear 0.125s;
+    -ms-transition: all linear 0.125s;
+    -o-transition: all linear 0.125s;
+    transition: all linear 0.125s;
+  }
+  .brand-cont-inner {
+    border-top: solid #f2f2f2 1px;
+    border-left: solid #f2f2f2 1px;
+    width: 881px;
+    .brand-item {
+      border-bottom: solid #f2f2f2 1px;
+      border-right: solid #f2f2f2 1px;
+      height: 42px;
+      width: 110px;
+      line-height: 42px;
+      text-align: center;
+      &.on, &:hover {
+        outline: 1px #ffba17 solid;
+        outline-offset: -1px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.23);
+      }
+    }
+  }
+}
+
+// 排序栏
+.sort-bar{
+  padding: $minSpacing 0;
+  border-bottom: 1px solid $clrBorder;
+  .form-group{
+    margin: 0;
+  }
+  .control-label{
+    padding-top: 8px;
+  }
+  .radio-cont{
+    padding-top: 7px;
+    padding-left: $minSpacing*2;
+  }
+  .radio-inline{
+    float: left;
+    span{
+      display: block;
+      border: 1px solid $clrFormBorder;
+      padding: 5px 17px;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    input[type="radio"]:checked + span{
+      border-color: $clrMain;
+    }
+  }
+}
+
+// 回收列表
+.products-list{
+  margin-left: -24px;
+  .product-item{
+    margin-left: 24px;
+  }
+}

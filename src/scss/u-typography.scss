@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@import "global.scss";
+
+@import "components/recycle/_recycle-comment";
+
+body{
+  background-color: lighten($clrMain,42%);
+}
+.typography-cont{
+  padding-top: 72px;
+}
+section{
+  margin: $minSpacing*2 0 $minSpacing*3;
+  h2.typography-sub-heading{
+    color: $clrMain;
+    font-weight: bold;
+    margin-left: $minSpacing;
+    &+div{
+      margin: $minSpacing*2 0;
+    }
+  }
+}
+
+/* Code 源码 */
+.source-code-cont{
+  margin: 0 $minSpacing*2;
+  width: 60%;
+  h3{
+    padding: 2px 8px;
+    margin: 0 1px;
+    border-left: 2px solid #23241f;
+    font-weight: bold;
+  }
+}
+
+/* Navigation 导航栏 / footer 底栏 */
+.common-nav{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: $clrWhiteBg;
+  border-bottom: 1px solid $clrMain;
+}
+.logo{
+  margin: 0 $minSpacing;
+  padding: 17px 0;
+  >img, >h1{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.common-footer{
+  .copyright{
+    text-align: center;
+    margin-top: $minSpacing*2;
+  }
+}
+
+/* Typesetting 排版 */
+.heading-cont{
+  h1,h2,h3,p,a{
+    width: 50%;
+    margin: $minSpacing*2;
+    display: block;
+  }
+}
+
+/* Button 按钮 */
+.oola-btn-group{
+  margin: $minSpacing*2;
+}
+
+/* Modal 模态框 */
+.modal-cont{
+  position: relative;
+}
+.modal{
+  position: static;
+  margin: 0 $minSpacing*2;
+  &.oola-modal{
+    background-color: transparent;
+    .modal-dialog{
+      margin:$minSpacing 0!important;
+    }
+  }
+  &:hover + code.oola-modal-code{
+    display: block;
+  }
+}
+code.oola-modal-code{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+
+/* Table 表格 */
+.oola-table{
+  width: 50%;
+  margin-left: $minSpacing*2!important;
+  margin-bottom: 28px!important;
+  caption{
+    color: darken($clrHtmlFont,10%)!important;
+    padding-top: 0;
+    &:before{
+      display: inline-block;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: darken($clrHtmlFont,10%);
+      margin: 0 10px;
+    }
+  }
+}
+
+/* Pagination 分页器 */
+.oola-pagination{
+  width: 50%;
+}
+
+/* Breadcrumbs 面包屑 */
+.oola-breadcrumbs{
+  margin-left: $minSpacing*2!important;
+}
+
+/* Notification 信息提示（弹框）*/
+.notice-cont{
+  position: static;
+  background-color: transparent;
+  text-align: left;
+  .notice-block{
+    display: block;
+    margin: $minSpacing 0 0 $minSpacing*2;
+  }
+}
+
+/* Graphic 图文 */
+#graphic .subtitle{
+  margin-top: $minSpacing*2;
+  margin-left: $minSpacing*2;
+  margin-bottom: 0;
+}
+.product-list{
+  .product-item{
+    margin-left: $minSpacing;
+    margin-right: $minSpacing;
+  }
+}
+.comment-list{
+  margin-top: $minSpacing*2;
+}
+.comment-list{
+  .comment-cont{
+    margin: 0 $minSpacing;
+  }
+}
+
+/* Form 表单 */
+form{
+  width: 50%;
+  margin-top: $minSpacing*2;
+}

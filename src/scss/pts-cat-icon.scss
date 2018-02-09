@@ -1,0 +1,11 @@
+span.category-icon {
+  height: 23px;
+  width: 18px;
+  background: url("../../img/pts-mall/list-category-icon-sprite.png");
+  display: block;
+}
+@for $i from 0 to 20 {
+  span.icon-#{$i+1} {
+    background-position: #{-18 * $i}px 0px;
+  }
+}

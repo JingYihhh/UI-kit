@@ -1,0 +1,25 @@
+@charset "UTF-8";
+@import "global";
+
+.project-img-cont{
+  width: 96px;
+  height: 72px;
+  overflow: hidden;
+  margin-right: $minSpacing;
+  img{
+    width: 100%;
+  }
+  &+a{
+    display: block;
+    margin-top: 18px;
+  }
+}
+.table.oola-table-img tbody td{
+  padding: $minSpacing $minSpacing*2;
+  &:first-child{
+    width: 240px;
+  }
+  &:last-child{
+    width: 170px;
+  }
+}

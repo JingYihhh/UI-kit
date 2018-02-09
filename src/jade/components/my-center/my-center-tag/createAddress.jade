@@ -1,0 +1,31 @@
+//  Created by Dicky on 2016/12/22.
+include createContent
+
+mixin createAddress()
+    .addr-content.fl
+        each addrInfo, index in attributes.addrInfoObj
+            .addrInfo-group.clearfix
+                if '收件人' === index
+                    .addrInfo-label.fl= index
+                    span.bold.fl= addrInfo
+                    if attributes.labelFlag
+                        .panel.attention.fl
+                            | 默认地址
+                else
+                    .addrInfo-label.fl= index
+                    span.fl= addrInfo
+
+mixin hasLabel(labelFlag)
+    if labelFlag
+        case labelFlag
+            when "1"
+                .panel.attention
+                    | 默认地址
+            when "2"
+                .panel
+                    | 已结束
+            default
+                =labelFlag
+
+
+

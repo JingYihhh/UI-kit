@@ -1,0 +1,65 @@
+//
+   Created by jingyi_h on 2016/12/14.
+extends ../../layout
+include ../oola-sidebar
+include ../oola-modal
+include ../m-oola-form
+
+block append oolaCss
+    link(rel="stylesheet" href="dist/css/my-center-common.css")
+
+block main
+    .banner-cont
+        .content-area.mar-cent.clearfix
+            .user-msg.clearfix
+                .user-avatar-cont.fl
+                    img(src="./img/my-center/user-avatar.jpg")
+                .user-name-cont.fl
+                    span.user-name 这是我的姓我的名和十二个字
+                    span.user-sex.icon-female
+                    .grade-bar
+                        .progress
+                            .progress-bar(role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100")
+                        a.vip-grade vip2
+                a(href="javascript:void(0);").oola-btn.btn-s.fl.privacy-set 隐私设置
+    section
+        .content-area.mar-cent.clearfix
+            //左侧边栏
+            .sidebar.fl
+                - var categoryList = ["我的公益","我的回收","我的积分","我的收藏","我的通知"]
+                - var categorySubList = ["我的公益","我的回收","我的积分"]
+                +oolaNavSidebar("slide-bottom", '', categoryList, categorySubList)
+            //个人中心主内容
+            .my-center-cont.fr
+                block mainBlock
+    //隐私设置弹窗
+    +oolaModal("smd", false, "", false, "privacy-set-modal")
+        h3 隐私设置
+        form.form.privacy-set-form
+            .form-group.clearfix
+                label.control-label.fl 捐助后显示昵称
+                input.form-control.form-control-sm.fl
+                span.fl 最多16个字符
+            +createVerFormGroup("是否公开我的捐助记录")
+                .radio-cont
+                    +createRadio("record", "1", "是", true)
+                    +createRadio("record", "2", "否", true)
+            +createVerFormGroup("是否在爱心墙中公开我的捐助金额")
+                .radio-cont
+                    +createRadio("amount", "3", "是", true)
+                    +createRadio("amount", "4", "否", true)
+            p 建议您公开以上两项信息，让您的公益行动鼓励更多人献出爱心。
+            .form-group.clearfix
+                button.fr.oola-btn.btn-main.btn-l(type="submit") 确认提交
+
+block append oolaScripts
+    script(src="js/components/sidebar-slider.js")
+    script.
+        $().ready(function () {
+            $("button.close, .modal-footer .oola-btn").click(function (){
+                $(this).parents(".oola-modal").hide();
+            });
+            $(".privacy-set").click(function () {
+                $(".privacy-set-modal").fadeIn();
+            });
+        });
